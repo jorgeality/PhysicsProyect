@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Index extends javax.swing.JFrame {
 
-    final double k = 9000000000.0;
+    final double k = 9E9;
 
     /**
      * Creates new form Index
@@ -49,12 +49,12 @@ public class Index extends javax.swing.JFrame {
         radioM = new javax.swing.JTextField();
         radiom = new javax.swing.JTextField();
         distancia = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<String>();
-        prefijos = new javax.swing.JComboBox<String>();
+        AlPre = new javax.swing.JComboBox<>();
+        prefijos = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<String>();
-        jComboBox7 = new javax.swing.JComboBox<String>();
-        jComboBox8 = new javax.swing.JComboBox<String>();
+        RPre = new javax.swing.JComboBox<>();
+        rPre = new javax.swing.JComboBox<>();
+        dPre = new javax.swing.JComboBox<>();
         CalcularCECHueco = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
@@ -64,15 +64,15 @@ public class Index extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        Q = new javax.swing.JLabel();
+        carga = new javax.swing.JLabel();
         h1 = new javax.swing.JLabel();
         h2 = new javax.swing.JLabel();
         R = new javax.swing.JLabel();
         r = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        Resultado = new javax.swing.JLabel();
+        d1 = new javax.swing.JLabel();
+        d2 = new javax.swing.JLabel();
+        resultado = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel23 = new javax.swing.JPanel();
@@ -125,10 +125,10 @@ public class Index extends javax.swing.JFrame {
         jLabel15.setBackground(java.awt.Color.white);
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/CilindroHueco.png"))); // NOI18N
         jPanel1.add(jLabel15);
-        jLabel15.setBounds(10, 30, 270, 210);
+        jLabel15.setBounds(70, 30, 270, 210);
 
         jPanel15.add(jPanel1);
-        jPanel1.setBounds(10, 10, 330, 250);
+        jPanel1.setBounds(10, 10, 390, 260);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos de entrada"));
 
@@ -169,10 +169,20 @@ public class Index extends javax.swing.JFrame {
                 alturaActionPerformed(evt);
             }
         });
+        altura.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                alturaKeyReleased(evt);
+            }
+        });
 
         radioM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 radioMActionPerformed(evt);
+            }
+        });
+        radioM.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radioMKeyReleased(evt);
             }
         });
 
@@ -181,16 +191,26 @@ public class Index extends javax.swing.JFrame {
                 radiomActionPerformed(evt);
             }
         });
+        radiom.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radiomKeyReleased(evt);
+            }
+        });
 
         distancia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 distanciaActionPerformed(evt);
             }
         });
+        distancia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                distanciaKeyReleased(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        AlPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 prefijosKeyReleased(evt);
@@ -200,11 +220,11 @@ public class Index extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("C");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        RPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        rPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        dPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
 
         CalcularCECHueco.setText("Calcular");
         CalcularCECHueco.addActionListener(new java.awt.event.ActionListener() {
@@ -227,7 +247,7 @@ public class Index extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(prefijos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 18, Short.MAX_VALUE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -235,25 +255,25 @@ public class Index extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(altura, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AlPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(radioM, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(RPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(radiom, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(rPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(distancia, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(dPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -274,29 +294,29 @@ public class Index extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(altura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AlPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(radioM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(RPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(radiom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(rPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(distancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dPre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(CalcularCECHueco)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel15.add(jPanel2);
-        jPanel2.setBounds(360, 10, 210, 250);
+        jPanel2.setBounds(430, 10, 240, 260);
 
         jTabbedPane4.addTab("tab2", jPanel15);
 
@@ -312,14 +332,14 @@ public class Index extends javax.swing.JFrame {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                .addContainerGap(231, Short.MAX_VALUE)
+                .addContainerGap(237, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(25, 25, 25))
         );
@@ -338,14 +358,14 @@ public class Index extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(231, Short.MAX_VALUE)
+                .addContainerGap(237, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(25, 25, 25))
         );
@@ -364,14 +384,14 @@ public class Index extends javax.swing.JFrame {
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(231, Short.MAX_VALUE)
+                .addContainerGap(237, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addGap(25, 25, 25))
         );
@@ -384,43 +404,26 @@ public class Index extends javax.swing.JFrame {
         jLabel7.setText("= ");
         jPanel5.add(jLabel7);
         jLabel7.setBounds(-10, 140, 415, 60);
-
-        jLabel4.setText("resultado");
-        jPanel5.add(jLabel4);
-        jLabel4.setBounds(680, 0, 45, 14);
-
-        Q.setText("Q");
-        jPanel5.add(Q);
-        Q.setBounds(90, 10, 30, 14);
-
-        h1.setText("h");
+        jPanel5.add(carga);
+        carga.setBounds(120, 40, 80, 20);
         jPanel5.add(h1);
-        h1.setBounds(70, 40, 34, 14);
-
-        h2.setText("h");
+        h1.setBounds(80, 60, 90, 20);
         jPanel5.add(h2);
-        h2.setBounds(210, 40, 34, 14);
-
-        R.setText("R");
+        h2.setBounds(290, 60, 60, 20);
         jPanel5.add(R);
-        R.setBounds(370, 40, 34, 14);
-
-        r.setText("r");
+        R.setBounds(370, 60, 50, 20);
         jPanel5.add(r);
-        r.setBounds(260, 40, 20, 14);
+        r.setBounds(530, 60, 50, 20);
+        jPanel5.add(d1);
+        d1.setBounds(230, 60, 50, 20);
+        jPanel5.add(d2);
+        d2.setBounds(460, 60, 50, 20);
+        jPanel5.add(resultado);
+        resultado.setBounds(600, 46, 100, 20);
 
-        jLabel6.setText("d");
-        jPanel5.add(jLabel6);
-        jLabel6.setBounds(160, 40, 10, 14);
-
-        jLabel17.setText("d");
-        jPanel5.add(jLabel17);
-        jLabel17.setBounds(320, 40, 30, 14);
-
-        Resultado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FormCampElec.png"))); // NOI18N
-        Resultado.setText("resultado");
-        jPanel5.add(Resultado);
-        Resultado.setBounds(10, 20, 490, 30);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FormCampElec.png"))); // NOI18N
+        jPanel5.add(jLabel4);
+        jLabel4.setBounds(10, 20, 610, 80);
 
         javax.swing.GroupLayout CampoElectricoLayout = new javax.swing.GroupLayout(CampoElectrico);
         CampoElectrico.setLayout(CampoElectricoLayout);
@@ -428,8 +431,8 @@ public class Index extends javax.swing.JFrame {
             CampoElectricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CampoElectricoLayout.createSequentialGroup()
                 .addGroup(CampoElectricoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane4)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jTabbedPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         CampoElectricoLayout.setVerticalGroup(
@@ -437,7 +440,7 @@ public class Index extends javax.swing.JFrame {
             .addGroup(CampoElectricoLayout.createSequentialGroup()
                 .addComponent(jTabbedPane4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -455,7 +458,7 @@ public class Index extends javax.swing.JFrame {
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton13)
                 .addContainerGap())
         );
@@ -481,7 +484,7 @@ public class Index extends javax.swing.JFrame {
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton14)
                 .addContainerGap())
         );
@@ -507,7 +510,7 @@ public class Index extends javax.swing.JFrame {
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton15)
                 .addContainerGap())
         );
@@ -533,7 +536,7 @@ public class Index extends javax.swing.JFrame {
         jPanel26Layout.setHorizontalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel26Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton16)
                 .addContainerGap())
         );
@@ -605,7 +608,7 @@ public class Index extends javax.swing.JFrame {
         jPanel27Layout.setHorizontalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton17)
                 .addContainerGap())
         );
@@ -631,7 +634,7 @@ public class Index extends javax.swing.JFrame {
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton18)
                 .addContainerGap())
         );
@@ -657,7 +660,7 @@ public class Index extends javax.swing.JFrame {
         jPanel29Layout.setHorizontalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton19)
                 .addContainerGap())
         );
@@ -683,7 +686,7 @@ public class Index extends javax.swing.JFrame {
         jPanel30Layout.setHorizontalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel30Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton20)
                 .addContainerGap())
         );
@@ -755,7 +758,7 @@ public class Index extends javax.swing.JFrame {
         jPanel31Layout.setHorizontalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton21)
                 .addContainerGap())
         );
@@ -781,7 +784,7 @@ public class Index extends javax.swing.JFrame {
         jPanel32Layout.setHorizontalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel32Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton22)
                 .addContainerGap())
         );
@@ -807,7 +810,7 @@ public class Index extends javax.swing.JFrame {
         jPanel33Layout.setHorizontalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton23)
                 .addContainerGap())
         );
@@ -833,7 +836,7 @@ public class Index extends javax.swing.JFrame {
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(493, Short.MAX_VALUE)
+                .addContainerGap(609, Short.MAX_VALUE)
                 .addComponent(jButton24)
                 .addContainerGap())
         );
@@ -931,14 +934,10 @@ public class Index extends javax.swing.JFrame {
                     radio = Double.parseDouble(this.radiom.getText()),
                     carga = Double.parseDouble(this.cargas.getText()),
                     distancia = Double.parseDouble(this.distancia.getText()), campo;
-            campo = ((Math.pow(9 * 10, 9) * carga) / altura) * (-1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2)) - 1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2)));
+            campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2))));
             //seteos de variables
-        this.Q.setText(this.cargas.getText());
-        this.h1.setText(this.altura.getText());
-        this.h2.setText(this.altura.getText());
-        this.r.setText(this.radiom.getText());
-        this.R.setText(this.radioM.getText());
-        this.Resultado.setText(String.valueOf(Math.pow(campo*10,3)));
+        
+        this.resultado.setText(String.valueOf(Math.abs(campo)));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
         }     
@@ -1034,13 +1033,36 @@ public class Index extends javax.swing.JFrame {
 
     private void cargasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyReleased
         String tg = cargas.getText().toString();
-        //carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
+        carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
     }//GEN-LAST:event_cargasKeyReleased
 
     private void prefijosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijosKeyReleased
         String tg = cargas.getText().toString();
-        //carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
+        carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
     }//GEN-LAST:event_prefijosKeyReleased
+
+    private void alturaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alturaKeyReleased
+       String h = altura.getText().toString();
+       h1.setText(h+AlPre.getSelectedItem().toString());
+       h2.setText(h+AlPre.getSelectedItem().toString());
+    }//GEN-LAST:event_alturaKeyReleased
+
+    private void radioMKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioMKeyReleased
+        String R = radioM.getText().toString();
+        this.R.setText(R + RPre.getSelectedItem().toString());    
+    }//GEN-LAST:event_radioMKeyReleased
+
+    private void radiomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radiomKeyReleased
+       String r = radiom.getText().toString();
+       this.r.setText(r + rPre.getSelectedItem().toString());
+    }//GEN-LAST:event_radiomKeyReleased
+
+    private void distanciaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distanciaKeyReleased
+        String d = distancia.getText().toString();
+        d1.setText(d + dPre.getSelectedItem().toString());
+        d2.setText(d + dPre.getSelectedItem().toString());
+        
+    }//GEN-LAST:event_distanciaKeyReleased
 
     /**
      * @param args the command line arguments
@@ -1078,13 +1100,17 @@ public class Index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> AlPre;
     private javax.swing.JButton CalcularCECHueco;
     private javax.swing.JPanel CampoElectrico;
-    private javax.swing.JLabel Q;
     private javax.swing.JLabel R;
-    private javax.swing.JLabel Resultado;
+    private javax.swing.JComboBox<String> RPre;
     private javax.swing.JTextField altura;
+    private javax.swing.JLabel carga;
     private javax.swing.JTextField cargas;
+    private javax.swing.JLabel d1;
+    private javax.swing.JLabel d2;
+    private javax.swing.JComboBox<String> dPre;
     private javax.swing.JTextField distancia;
     private javax.swing.JLabel h1;
     private javax.swing.JLabel h2;
@@ -1103,10 +1129,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1115,12 +1137,10 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1157,7 +1177,9 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JPanel panel4;
     private javax.swing.JComboBox<String> prefijos;
     private javax.swing.JLabel r;
+    private javax.swing.JComboBox<String> rPre;
     private javax.swing.JTextField radioM;
     private javax.swing.JTextField radiom;
+    private javax.swing.JLabel resultado;
     // End of variables declaration//GEN-END:variables
 }
