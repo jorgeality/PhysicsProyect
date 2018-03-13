@@ -49,12 +49,12 @@ public class Index extends javax.swing.JFrame {
         radioM = new javax.swing.JTextField();
         radiom = new javax.swing.JTextField();
         distancia = new javax.swing.JTextField();
-        AlPre = new javax.swing.JComboBox<>();
-        prefijos = new javax.swing.JComboBox<>();
+        AlPre = new javax.swing.JComboBox<String>();
+        prefijos = new javax.swing.JComboBox<String>();
         jLabel2 = new javax.swing.JLabel();
-        RPre = new javax.swing.JComboBox<>();
-        rPre = new javax.swing.JComboBox<>();
-        dPre = new javax.swing.JComboBox<>();
+        RPre = new javax.swing.JComboBox<String>();
+        rPre = new javax.swing.JComboBox<String>();
+        dPre = new javax.swing.JComboBox<String>();
         CalcularCECHueco = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
@@ -208,9 +208,19 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        AlPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        AlPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        AlPre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlPreActionPerformed(evt);
+            }
+        });
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prefijosActionPerformed(evt);
+            }
+        });
         prefijos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 prefijosKeyReleased(evt);
@@ -220,11 +230,26 @@ public class Index extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("C");
 
-        RPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        RPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        RPre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RPreActionPerformed(evt);
+            }
+        });
 
-        rPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        rPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        rPre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rPreActionPerformed(evt);
+            }
+        });
 
-        dPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        dPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        dPre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dPreActionPerformed(evt);
+            }
+        });
 
         CalcularCECHueco.setText("Calcular");
         CalcularCECHueco.addActionListener(new java.awt.event.ActionListener() {
@@ -403,7 +428,7 @@ public class Index extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FormCampElec.png"))); // NOI18N
         jLabel7.setText("= ");
         jPanel5.add(jLabel7);
-        jLabel7.setBounds(-10, 140, 415, 60);
+        jLabel7.setBounds(-10, 140, 614, 60);
         jPanel5.add(carga);
         carga.setBounds(120, 40, 80, 20);
         jPanel5.add(h1);
@@ -928,7 +953,7 @@ public class Index extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CalcularCECHuecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHuecoActionPerformed
-         try {
+        try {
             double altura = Double.parseDouble(this.altura.getText()),
                     radioM = Double.parseDouble(this.radioM.getText()),
                     radio = Double.parseDouble(this.radiom.getText()),
@@ -936,11 +961,11 @@ public class Index extends javax.swing.JFrame {
                     distancia = Double.parseDouble(this.distancia.getText()), campo;
             campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2))));
             //seteos de variables
-        
-        this.resultado.setText(String.valueOf(Math.abs(campo)));
+
+            this.resultado.setText(String.valueOf(Math.abs(campo)));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
-        }     
+        }
     }//GEN-LAST:event_CalcularCECHuecoActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1032,37 +1057,59 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargasKeyPressed
 
     private void cargasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyReleased
-        String tg = cargas.getText().toString();
-        carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
+        String tg = cargas.getText();
+        carga.setText(tg + " " + this.prefijos.getSelectedItem().toString() + 'C');
     }//GEN-LAST:event_cargasKeyReleased
 
     private void prefijosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijosKeyReleased
-        String tg = cargas.getText().toString();
-        carga.setText(tg + prefijos.getSelectedItem().toString() + "C");
+        /*String tg = cargas.getText().toString();
+         carga.setText(tg + prefijos.getSelectedItem().toString() + "C");*/
     }//GEN-LAST:event_prefijosKeyReleased
 
     private void alturaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alturaKeyReleased
-       String h = altura.getText().toString();
-       h1.setText(h+AlPre.getSelectedItem().toString());
-       h2.setText(h+AlPre.getSelectedItem().toString());
+        String h = altura.getText().toString();
+        h1.setText(h + " " + AlPre.getSelectedItem().toString());
+        h2.setText(h + " " + AlPre.getSelectedItem().toString());
     }//GEN-LAST:event_alturaKeyReleased
 
     private void radioMKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioMKeyReleased
         String R = radioM.getText().toString();
-        this.R.setText(R + RPre.getSelectedItem().toString());    
+        this.R.setText(R + " " + RPre.getSelectedItem().toString());
     }//GEN-LAST:event_radioMKeyReleased
 
     private void radiomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radiomKeyReleased
-       String r = radiom.getText().toString();
-       this.r.setText(r + rPre.getSelectedItem().toString());
+        String r = radiom.getText().toString();
+        this.r.setText(r + " " + rPre.getSelectedItem().toString());
     }//GEN-LAST:event_radiomKeyReleased
 
     private void distanciaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distanciaKeyReleased
         String d = distancia.getText().toString();
-        d1.setText(d + dPre.getSelectedItem().toString());
-        d2.setText(d + dPre.getSelectedItem().toString());
-        
+        d1.setText(d + " " + dPre.getSelectedItem().toString());
+        d2.setText(d + " " + dPre.getSelectedItem().toString());
+
     }//GEN-LAST:event_distanciaKeyReleased
+
+    private void prefijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijosActionPerformed
+        this.carga.setText(this.cargas.getText() + " " + this.prefijos.getSelectedItem().toString() + 'C');
+    }//GEN-LAST:event_prefijosActionPerformed
+
+    private void AlPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPreActionPerformed
+        this.h1.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
+        this.h2.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
+    }//GEN-LAST:event_AlPreActionPerformed
+
+    private void RPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPreActionPerformed
+        this.R.setText(this.radioM.getText() + " " + this.RPre.getSelectedItem().toString());
+    }//GEN-LAST:event_RPreActionPerformed
+
+    private void rPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rPreActionPerformed
+        this.r.setText(this.radiom.getText() + " " + this.rPre.getSelectedItem().toString());
+    }//GEN-LAST:event_rPreActionPerformed
+
+    private void dPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPreActionPerformed
+        this.d1.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
+        this.d2.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
+    }//GEN-LAST:event_dPreActionPerformed
 
     /**
      * @param args the command line arguments
