@@ -5,6 +5,7 @@
  */
 package UI;
 
+import Modelos.Constantes;
 import javax.swing.JOptionPane;
 
 /**
@@ -1414,11 +1415,12 @@ public class Index extends javax.swing.JFrame {
 
     private void CalcularCECHuecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHuecoActionPerformed
         try {
-            double altura = Double.parseDouble(this.altura.getText()),
-                    radioM = Double.parseDouble(this.radioM.getText()),
-                    radio = Double.parseDouble(this.radiom.getText()),
-                    carga = Double.parseDouble(this.cargas.getText()),
-                    distancia = Double.parseDouble(this.distancia.getText()), campo;
+            Constantes conversion = new Constantes();
+            double altura = conversion.convercionLongitud(Double.parseDouble(this.altura.getText()), this.AlPre.getSelectedItem().toString()),
+                    radioM = conversion.convercionLongitud(Double.parseDouble(this.radioM.getText()), this.RPre.getSelectedItem().toString()),
+                    radio = conversion.convercionLongitud(Double.parseDouble(this.radiom.getText()), this.rPre.getSelectedItem().toString()),
+                    carga = conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()),
+                    distancia = conversion.convercionLongitud(Double.parseDouble(this.distancia.getText()), this.dPre.getSelectedItem().toString()), campo;
             campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2))));
             //seteos de variables
 
@@ -1497,7 +1499,10 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_radiomActionPerformed
 
     private void distanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distanciaActionPerformed
-        // TODO add your handling code here:
+        /*String d = this.distancia.getText().toString();
+        Constantes conversion = new Constantes();
+        d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
+        d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");*/
     }//GEN-LAST:event_distanciaActionPerformed
 
     private void cargasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyTyped
@@ -1509,8 +1514,8 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargasKeyPressed
 
     private void cargasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyReleased
-        String tg = cargas.getText();
-        carga.setText(tg + " " + this.prefijos.getSelectedItem().toString() + 'C');
+        Constantes conversion = new Constantes();
+        this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString())+"C");
     }//GEN-LAST:event_cargasKeyReleased
 
     private void prefijosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijosKeyReleased
@@ -1519,48 +1524,61 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_prefijosKeyReleased
 
     private void alturaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alturaKeyReleased
-        String h = altura.getText().toString();
-        h1.setText(h + " " + AlPre.getSelectedItem().toString());
-        h2.setText(h + " " + AlPre.getSelectedItem().toString());
+        String h = this.altura.getText().toString();
+        Constantes conversion = new Constantes();
+        this.h1.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString())+ " m");
+        this.h2.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_alturaKeyReleased
 
     private void radioMKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioMKeyReleased
-        String R = radioM.getText().toString();
-        this.R.setText(R + " " + RPre.getSelectedItem().toString());
+        String d = this.radioM.getText();
+        Constantes conversion = new Constantes();
+        this.R.setText(conversion.convercionLongitud(Double.parseDouble(d), this.RPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_radioMKeyReleased
 
     private void radiomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radiomKeyReleased
-        String r = radiom.getText().toString();
-        this.r.setText(r + " " + rPre.getSelectedItem().toString());
+        String d = this.radiom.getText();
+        Constantes conversion = new Constantes();
+        this.r.setText(conversion.convercionLongitud(Double.parseDouble(d), this.rPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_radiomKeyReleased
 
     private void distanciaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distanciaKeyReleased
-        String d = distancia.getText().toString();
-        d1.setText(d + " " + dPre.getSelectedItem().toString());
-        d2.setText(d + " " + dPre.getSelectedItem().toString());
+        String d = this.distancia.getText();
+        Constantes conversion = new Constantes();
+        this.d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
+        this.d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
 
     }//GEN-LAST:event_distanciaKeyReleased
 
     private void prefijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijosActionPerformed
-        this.carga.setText(this.cargas.getText() + " " + this.prefijos.getSelectedItem().toString() + 'C');
+        Constantes conversion = new Constantes();
+        this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString())+"C");
     }//GEN-LAST:event_prefijosActionPerformed
 
     private void AlPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPreActionPerformed
-        this.h1.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
-        this.h2.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
+        String h = this.altura.getText();
+        Constantes conversion = new Constantes();
+        this.h1.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString())+ " m");
+        this.h2.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_AlPreActionPerformed
 
     private void RPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPreActionPerformed
-        this.R.setText(this.radioM.getText() + " " + this.RPre.getSelectedItem().toString());
+        String d = this.radioM.getText();
+        Constantes conversion = new Constantes();
+        this.R.setText(conversion.convercionLongitud(Double.parseDouble(d), this.RPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_RPreActionPerformed
 
     private void rPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rPreActionPerformed
-        this.r.setText(this.radiom.getText() + " " + this.rPre.getSelectedItem().toString());
+        String d = this.radiom.getText();
+        Constantes conversion = new Constantes();
+        this.r.setText(conversion.convercionLongitud(Double.parseDouble(d), this.rPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_rPreActionPerformed
 
     private void dPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPreActionPerformed
-        this.d1.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
-        this.d2.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
+        String d = this.distancia.getText();
+        Constantes conversion = new Constantes();
+        this.d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
+        this.d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
     }//GEN-LAST:event_dPreActionPerformed
 
     private void vXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vXActionPerformed
@@ -1651,8 +1669,8 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_distancia1ActionPerformed
 
     private void distancia1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distancia1KeyReleased
-        d3.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
-        d4.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
+        /*d3.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
+        d4.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());*/
     }//GEN-LAST:event_distancia1KeyReleased
 
     private void AlPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPre1ActionPerformed
