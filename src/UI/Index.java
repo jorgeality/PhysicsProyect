@@ -50,12 +50,12 @@ public class Index extends javax.swing.JFrame {
         radioM = new javax.swing.JTextField();
         radiom = new javax.swing.JTextField();
         distancia = new javax.swing.JTextField();
-        AlPre = new javax.swing.JComboBox<>();
-        prefijos = new javax.swing.JComboBox<>();
+        AlPre = new javax.swing.JComboBox<String>();
+        prefijos = new javax.swing.JComboBox<String>();
         jLabel2 = new javax.swing.JLabel();
-        RPre = new javax.swing.JComboBox<>();
-        rPre = new javax.swing.JComboBox<>();
-        dPre = new javax.swing.JComboBox<>();
+        RPre = new javax.swing.JComboBox<String>();
+        rPre = new javax.swing.JComboBox<String>();
+        dPre = new javax.swing.JComboBox<String>();
         CalcularCECHueco = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -80,11 +80,11 @@ public class Index extends javax.swing.JFrame {
         altura1 = new javax.swing.JTextField();
         radioM1 = new javax.swing.JTextField();
         distancia1 = new javax.swing.JTextField();
-        AlPre1 = new javax.swing.JComboBox<>();
-        prefijos2 = new javax.swing.JComboBox<>();
+        AlPre1 = new javax.swing.JComboBox<String>();
+        prefijos2 = new javax.swing.JComboBox<String>();
         jLabel29 = new javax.swing.JLabel();
-        RPre1 = new javax.swing.JComboBox<>();
-        dPre1 = new javax.swing.JComboBox<>();
+        RPre1 = new javax.swing.JComboBox<String>();
+        dPre1 = new javax.swing.JComboBox<String>();
         CalcularCECHueco1 = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         carga1 = new javax.swing.JLabel();
@@ -101,16 +101,16 @@ public class Index extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        CalcularDisco = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         vX = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         vR = new javax.swing.JTextField();
-        Cx = new javax.swing.JComboBox<>();
-        CR = new javax.swing.JComboBox<>();
+        Cx = new javax.swing.JComboBox<String>();
+        CR = new javax.swing.JComboBox<String>();
         jLabel17 = new javax.swing.JLabel();
         cargadisco = new javax.swing.JTextField();
-        prefijos1 = new javax.swing.JComboBox<>();
+        prefijos1 = new javax.swing.JComboBox<String>();
         jLabel20 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         x = new javax.swing.JLabel();
@@ -119,7 +119,7 @@ public class Index extends javax.swing.JFrame {
         R3 = new javax.swing.JLabel();
         carg = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        CampoDisco = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel23 = new javax.swing.JPanel();
@@ -256,14 +256,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        AlPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        AlPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         AlPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AlPreActionPerformed(evt);
             }
         });
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijosActionPerformed(evt);
@@ -278,21 +278,21 @@ public class Index extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("C");
 
-        RPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        RPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         RPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RPreActionPerformed(evt);
             }
         });
 
-        rPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        rPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         rPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rPreActionPerformed(evt);
             }
         });
 
-        dPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        dPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         dPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dPreActionPerformed(evt);
@@ -509,14 +509,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        AlPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        AlPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         AlPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AlPre1ActionPerformed(evt);
             }
         });
 
-        prefijos2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos2ActionPerformed(evt);
@@ -531,14 +531,14 @@ public class Index extends javax.swing.JFrame {
         jLabel29.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel29.setText("C");
 
-        RPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        RPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         RPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RPre1ActionPerformed(evt);
             }
         });
 
-        dPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
+        dPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
         dPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dPre1ActionPerformed(evt);
@@ -557,40 +557,36 @@ public class Index extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cargas1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prefijos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cargas1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(prefijos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                                .addComponent(AlPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel12Layout.createSequentialGroup()
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(AlPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel12Layout.createSequentialGroup()
-                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radioM1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radioM1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
@@ -719,10 +715,10 @@ public class Index extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "DATOS DE ENTRADA"));
 
-        jButton3.setText("Calcular");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        CalcularDisco.setText("Calcular");
+        CalcularDisco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                CalcularDiscoActionPerformed(evt);
             }
         });
 
@@ -754,14 +750,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Cx.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "mt", "cm", "mm" }));
+        Cx.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mt", "cm", "mm" }));
         Cx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CxActionPerformed(evt);
             }
         });
 
-        CR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "mt", "cm", "mm" }));
+        CR.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mt", "cm", "mm" }));
         CR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CRActionPerformed(evt);
@@ -782,7 +778,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos1ActionPerformed(evt);
@@ -829,7 +825,7 @@ public class Index extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(CalcularDisco)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -852,7 +848,7 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(prefijos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(CalcularDisco)
                 .addContainerGap())
         );
 
@@ -882,8 +878,8 @@ public class Index extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/formulaDisco.png"))); // NOI18N
         jPanel6.add(jLabel23);
         jLabel23.setBounds(40, 30, 520, 90);
-        jPanel6.add(jLabel21);
-        jLabel21.setBounds(550, 60, 50, 20);
+        jPanel6.add(CampoDisco);
+        CampoDisco.setBounds(550, 60, 50, 20);
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1430,9 +1426,20 @@ public class Index extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CalcularCECHuecoActionPerformed
     
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void CalcularDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularDiscoActionPerformed
+        try{
+           Constantes conversion = new Constantes();
+           double distancia = conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()),
+                   carga = conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()),
+                   radio = conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()),
+                   campo;
+                   campo = (2*Math.PI*k*(carga/Math.pow(distancia, 2)))*(1-(distancia/(Math.sqrt(Math.pow(radio, 2)+Math.pow(distancia, 2)))));
+                   this.CampoDisco.setText(campo+ " C");
+           
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_CalcularDiscoActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
@@ -1590,23 +1597,30 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_vRActionPerformed
 
     private void vXKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vXKeyReleased
-        x.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
-        x2.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        this.x.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+        this.x2.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
 
     }//GEN-LAST:event_vXKeyReleased
 
     private void vRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vRKeyReleased
-        R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
-        R3.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        /*R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        R3.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());*/
+        Constantes conversion = new Constantes();
+        this.R2.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+        this.R3.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_vRKeyReleased
 
     private void CxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CxActionPerformed
-        x.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
-        x2.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        this.x.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+        this.x2.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_CxActionPerformed
 
     private void CRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CRActionPerformed
-        R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        this.R2.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+        this.R3.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_CRActionPerformed
 
     private void cargadiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargadiscoActionPerformed
@@ -1614,13 +1628,14 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargadiscoActionPerformed
 
     private void cargadiscoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargadiscoKeyReleased
-
-        carg.setText(cargadisco.getText().toString() + prefijos1.getSelectedItem().toString() + "C");
+        Constantes conversion = new Constantes();
+        carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
 
     }//GEN-LAST:event_cargadiscoKeyReleased
 
     private void prefijos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos1ActionPerformed
-        carg.setText(cargadisco.getText().toString() + prefijos1.getSelectedItem().toString() + "C");
+        Constantes conversion = new Constantes();
+        carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
     }//GEN-LAST:event_prefijos1ActionPerformed
 
     private void prefijos1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijos1KeyReleased
@@ -1680,7 +1695,8 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_AlPre1ActionPerformed
 
     private void prefijos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos2ActionPerformed
-        carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
     }//GEN-LAST:event_prefijos2ActionPerformed
 
     private void prefijos2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijos2KeyReleased
@@ -1742,6 +1758,8 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> CR;
     private javax.swing.JButton CalcularCECHueco;
     private javax.swing.JButton CalcularCECHueco1;
+    private javax.swing.JButton CalcularDisco;
+    private javax.swing.JLabel CampoDisco;
     private javax.swing.JPanel CampoElectrico;
     private javax.swing.JComboBox<String> Cx;
     private javax.swing.JLabel R;
@@ -1785,7 +1803,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1799,7 +1816,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
