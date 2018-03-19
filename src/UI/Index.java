@@ -5,6 +5,7 @@
  */
 package UI;
 
+import Modelos.Constantes;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,6 +15,7 @@ import javax.swing.JOptionPane;
 public class Index extends javax.swing.JFrame {
 
     final double k = 9E9;
+    Constantes conversion = new Constantes();
 
     /**
      * Creates new form Index
@@ -84,7 +86,7 @@ public class Index extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         RPre1 = new javax.swing.JComboBox<>();
         dPre1 = new javax.swing.JComboBox<>();
-        CalcularCECHueco1 = new javax.swing.JButton();
+        CalcularCECilindroSolido = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         carga1 = new javax.swing.JLabel();
         h3 = new javax.swing.JLabel();
@@ -96,11 +98,12 @@ public class Index extends javax.swing.JFrame {
         h5 = new javax.swing.JLabel();
         Rs3 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
+        valor = new javax.swing.JLabel();
         jPanel17 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        CalcularDisco = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         vX = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -118,7 +121,7 @@ public class Index extends javax.swing.JFrame {
         R3 = new javax.swing.JLabel();
         carg = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
+        CampoDisco = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
         jTabbedPane7 = new javax.swing.JTabbedPane();
         jPanel23 = new javax.swing.JPanel();
@@ -262,7 +265,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijosActionPerformed(evt);
@@ -398,35 +401,35 @@ public class Index extends javax.swing.JFrame {
         jPanel5.add(jLabel7);
         jLabel7.setBounds(-10, 140, 614, 60);
 
-        carga.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        carga.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(carga);
-        carga.setBounds(140, 40, 80, 20);
+        carga.setBounds(135, 40, 80, 20);
 
         h1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel5.add(h1);
-        h1.setBounds(110, 60, 90, 20);
+        h1.setBounds(85, 65, 90, 20);
 
-        h2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        h2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(h2);
-        h2.setBounds(315, 62, 50, 20);
+        h2.setBounds(285, 65, 50, 20);
 
-        R.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        R.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(R);
-        R.setBounds(390, 60, 50, 20);
+        R.setBounds(362, 65, 50, 20);
 
-        r.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        r.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(r);
-        r.setBounds(550, 62, 50, 20);
+        r.setBounds(532, 65, 50, 20);
 
-        d1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(d1);
-        d1.setBounds(250, 62, 50, 20);
+        d1.setBounds(225, 65, 50, 20);
 
-        d2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel5.add(d2);
-        d2.setBounds(480, 62, 50, 20);
+        d2.setBounds(457, 65, 50, 20);
         jPanel5.add(resultado);
-        resultado.setBounds(600, 46, 100, 20);
+        resultado.setBounds(620, 55, 100, 20);
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/FormCampElec.png"))); // NOI18N
         jPanel5.add(jLabel4);
@@ -515,7 +518,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos2ActionPerformed(evt);
@@ -544,10 +547,10 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        CalcularCECHueco1.setText("Calcular");
-        CalcularCECHueco1.addActionListener(new java.awt.event.ActionListener() {
+        CalcularCECilindroSolido.setText("Calcular");
+        CalcularCECilindroSolido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CalcularCECHueco1ActionPerformed(evt);
+                CalcularCECilindroSolidoActionPerformed(evt);
             }
         });
 
@@ -556,45 +559,41 @@ public class Index extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cargas1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prefijos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                    .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cargas1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(prefijos2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                                .addComponent(AlPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel12Layout.createSequentialGroup()
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(altura1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(AlPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel12Layout.createSequentialGroup()
-                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(radioM1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(RPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(radioM1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
-                .addComponent(CalcularCECHueco1)
+                .addComponent(CalcularCECilindroSolido)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -622,7 +621,7 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(CalcularCECHueco1)
+                .addComponent(CalcularCECilindroSolido)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -663,7 +662,9 @@ public class Index extends javax.swing.JFrame {
 
         jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/formSolido.png"))); // NOI18N
         jPanel13.add(jLabel31);
-        jLabel31.setBounds(10, 20, 710, 80);
+        jLabel31.setBounds(10, 20, 650, 80);
+        jPanel13.add(valor);
+        valor.setBounds(660, 50, 70, 30);
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -718,10 +719,10 @@ public class Index extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "DATOS DE ENTRADA"));
 
-        jButton3.setText("Calcular");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        CalcularDisco.setText("Calcular");
+        CalcularDisco.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                CalcularDiscoActionPerformed(evt);
             }
         });
 
@@ -781,7 +782,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos1ActionPerformed(evt);
@@ -828,7 +829,7 @@ public class Index extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(CalcularDisco)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -851,7 +852,7 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(prefijos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(CalcularDisco)
                 .addContainerGap())
         );
 
@@ -881,8 +882,8 @@ public class Index extends javax.swing.JFrame {
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/formulaDisco.png"))); // NOI18N
         jPanel6.add(jLabel23);
         jLabel23.setBounds(40, 30, 520, 90);
-        jPanel6.add(jLabel21);
-        jLabel21.setBounds(550, 60, 50, 20);
+        jPanel6.add(CampoDisco);
+        CampoDisco.setBounds(540, 60, 130, 20);
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -1414,23 +1415,36 @@ public class Index extends javax.swing.JFrame {
 
     private void CalcularCECHuecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHuecoActionPerformed
         try {
-            double altura = Double.parseDouble(this.altura.getText()),
-                    radioM = Double.parseDouble(this.radioM.getText()),
-                    radio = Double.parseDouble(this.radiom.getText()),
-                    carga = Double.parseDouble(this.cargas.getText()),
-                    distancia = Double.parseDouble(this.distancia.getText()), campo;
-            campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2))));
-            //seteos de variables
 
-            this.resultado.setText(String.valueOf(Math.abs(campo)));
+            double altura = conversion.convercionLongitud(Double.parseDouble(this.altura.getText()), this.AlPre.getSelectedItem().toString()),
+                    radioM = conversion.convercionLongitud(Double.parseDouble(this.radioM.getText()), this.RPre.getSelectedItem().toString()),
+                    radio = conversion.convercionLongitud(Double.parseDouble(this.radiom.getText()), this.rPre.getSelectedItem().toString()),
+                    carga = conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()),
+                    distancia = conversion.convercionLongitud(Double.parseDouble(this.distancia.getText()), this.dPre.getSelectedItem().toString()), campo;
+            campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radio, 2))));
+            //seteos de variables
+            double AbsoluteField = Math.abs(campo);
+            this.resultado.setText(conversion.prefijos2(AbsoluteField) + " V/m");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
         }
     }//GEN-LAST:event_CalcularCECHuecoActionPerformed
-    
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void CalcularDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularDiscoActionPerformed
+        try {
+
+            double distancia = conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()),
+                    carga = conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()),
+                    radio = conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()),
+                    campo;
+            campo = (2 * Math.PI * k * (carga / (Math.PI * Math.pow(radio, 2)))) * (1 - (distancia / (Math.sqrt(Math.pow(radio, 2) + Math.pow(distancia, 2)))));
+            double AbsoluteField = Math.abs(campo);
+            this.CampoDisco.setText(conversion.prefijos2(AbsoluteField) + " V/m");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_CalcularDiscoActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
@@ -1497,7 +1511,10 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_radiomActionPerformed
 
     private void distanciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distanciaActionPerformed
-        // TODO add your handling code here:
+        /*String d = this.distancia.getText().toString();
+        Constantes conversion = new Constantes();
+        d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");
+        d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString())+ " m");*/
     }//GEN-LAST:event_distanciaActionPerformed
 
     private void cargasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyTyped
@@ -1509,8 +1526,13 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargasKeyPressed
 
     private void cargasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyReleased
-        String tg = cargas.getText();
-        carga.setText(tg + " " + this.prefijos.getSelectedItem().toString() + 'C');
+        try {
+            this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
+        } catch (Exception e) {
+            this.carga.setText("");
+        }
+
+
     }//GEN-LAST:event_cargasKeyReleased
 
     private void prefijosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijosKeyReleased
@@ -1519,48 +1541,111 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_prefijosKeyReleased
 
     private void alturaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_alturaKeyReleased
-        String h = altura.getText().toString();
-        h1.setText(h + " " + AlPre.getSelectedItem().toString());
-        h2.setText(h + " " + AlPre.getSelectedItem().toString());
+        try {
+            String h = this.altura.getText().toString();
+
+            this.h1.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString()) + " m");
+            this.h2.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString()) + " m");
+        } catch (Exception e) {
+            this.h2.setText("");
+            this.h1.setText("");
+        }
+
+
     }//GEN-LAST:event_alturaKeyReleased
 
     private void radioMKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioMKeyReleased
-        String R = radioM.getText().toString();
-        this.R.setText(R + " " + RPre.getSelectedItem().toString());
+
+        try {
+            String d = this.radioM.getText();
+
+            this.R.setText(conversion.convercionLongitud(Double.parseDouble(d), this.RPre.getSelectedItem().toString()) + " m");
+        } catch (Exception e) {
+            this.R.setText("");
+        }
+
     }//GEN-LAST:event_radioMKeyReleased
 
     private void radiomKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radiomKeyReleased
-        String r = radiom.getText().toString();
-        this.r.setText(r + " " + rPre.getSelectedItem().toString());
+        try {
+            String d = this.radiom.getText();
+
+            this.r.setText(conversion.convercionLongitud(Double.parseDouble(d), this.rPre.getSelectedItem().toString()) + " m");
+
+        } catch (Exception e) {
+            this.r.setText("");
+        }
     }//GEN-LAST:event_radiomKeyReleased
 
     private void distanciaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distanciaKeyReleased
-        String d = distancia.getText().toString();
-        d1.setText(d + " " + dPre.getSelectedItem().toString());
-        d2.setText(d + " " + dPre.getSelectedItem().toString());
+        try {
+            String d = this.distancia.getText();
+
+            this.d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString()) + " m");
+            this.d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString()) + " m");
+
+        } catch (Exception e) {
+            this.d1.setText("");
+            this.d2.setText("");
+        }
 
     }//GEN-LAST:event_distanciaKeyReleased
 
     private void prefijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijosActionPerformed
-        this.carga.setText(this.cargas.getText() + " " + this.prefijos.getSelectedItem().toString() + 'C');
+        try {
+            this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
+        } catch (Exception e) {
+            this.carga.setText("");
+        }
+
     }//GEN-LAST:event_prefijosActionPerformed
 
     private void AlPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPreActionPerformed
-        this.h1.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
-        this.h2.setText(this.altura.getText() + " " + this.AlPre.getSelectedItem().toString());
+        try {
+            String h = this.altura.getText();
+
+            this.h1.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString()) + " m");
+            this.h2.setText(conversion.convercionLongitud(Double.parseDouble(h), this.AlPre.getSelectedItem().toString()) + " m");
+
+        } catch (Exception e) {
+            this.h1.setText("");
+            this.h1.setText("");
+        }
     }//GEN-LAST:event_AlPreActionPerformed
 
     private void RPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPreActionPerformed
-        this.R.setText(this.radioM.getText() + " " + this.RPre.getSelectedItem().toString());
+        try {
+            String d = this.radioM.getText();
+
+            this.R.setText(conversion.convercionLongitud(Double.parseDouble(d), this.RPre.getSelectedItem().toString()) + " m");
+
+        } catch (Exception e) {
+            this.R.setText("");
+        }
     }//GEN-LAST:event_RPreActionPerformed
 
     private void rPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rPreActionPerformed
-        this.r.setText(this.radiom.getText() + " " + this.rPre.getSelectedItem().toString());
+
+        try {
+            String d = this.radiom.getText();
+
+            this.r.setText(conversion.convercionLongitud(Double.parseDouble(d), this.rPre.getSelectedItem().toString()) + " m");
+        } catch (Exception e) {
+            this.r.setText("");
+        }
     }//GEN-LAST:event_rPreActionPerformed
 
     private void dPreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPreActionPerformed
-        this.d1.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
-        this.d2.setText(this.distancia.getText() + " " + this.dPre.getSelectedItem().toString());
+        try {
+            String d = this.distancia.getText();
+
+            this.d1.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString()) + " m");
+            this.d2.setText(conversion.convercionLongitud(Double.parseDouble(d), this.dPre.getSelectedItem().toString()) + " m");
+        } catch (Exception e) {
+            this.d1.setText("");
+            this.d2.setText("");
+        }
+
     }//GEN-LAST:event_dPreActionPerformed
 
     private void vXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vXActionPerformed
@@ -1572,23 +1657,50 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_vRActionPerformed
 
     private void vXKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vXKeyReleased
-        x.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
-        x2.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
+        try {
+            this.x.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+            this.x2.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+
+        } catch (Exception e) {
+            this.x.setText("");
+            this.x2.setText("");
+        }
 
     }//GEN-LAST:event_vXKeyReleased
 
     private void vRKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_vRKeyReleased
-        R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
-        R3.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        /*R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        R3.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());*/
+        try {
+            this.R2.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+            this.R3.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.R2.setText("");
+            this.R3.setText("");
+        }
+
     }//GEN-LAST:event_vRKeyReleased
 
     private void CxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CxActionPerformed
-        x.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
-        x2.setText(vX.getText().toString() + " " + Cx.getSelectedItem().toString());
+        try {
+            this.x.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+            this.x2.setText(conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.x.setText("");
+            this.x2.setText("");
+        }
+
     }//GEN-LAST:event_CxActionPerformed
 
     private void CRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CRActionPerformed
-        R2.setText(vR.getText().toString() + " " + CR.getSelectedItem().toString());
+        try {
+            this.R2.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+            this.R3.setText(conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.R2.setText("");
+            this.R3.setText("");
+        }
+
     }//GEN-LAST:event_CRActionPerformed
 
     private void cargadiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargadiscoActionPerformed
@@ -1596,13 +1708,22 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargadiscoActionPerformed
 
     private void cargadiscoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargadiscoKeyReleased
+        try {
+            carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
 
-        carg.setText(cargadisco.getText().toString() + prefijos1.getSelectedItem().toString() + "C");
+        } catch (Exception e) {
+            carg.setText("");
+        }
 
     }//GEN-LAST:event_cargadiscoKeyReleased
 
     private void prefijos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos1ActionPerformed
-        carg.setText(cargadisco.getText().toString() + prefijos1.getSelectedItem().toString() + "C");
+        try {
+            carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
+        } catch (Exception e) {
+            carg.setText("");
+        }
+
     }//GEN-LAST:event_prefijos1ActionPerformed
 
     private void prefijos1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijos1KeyReleased
@@ -1618,7 +1739,13 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargas1KeyPressed
 
     private void cargas1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargas1KeyReleased
-        carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString()+"C");
+        //carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString()+"C");
+        try {
+            carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
+        } catch (Exception e) {
+            carga1.setText("");
+        }
+
     }//GEN-LAST:event_cargas1KeyReleased
 
     private void cargas1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargas1KeyTyped
@@ -1630,20 +1757,35 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_altura1ActionPerformed
 
     private void altura1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_altura1KeyReleased
+        try {
+            h3.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+            h4.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+            h5.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            h3.setText("");
+            h4.setText("");
+            h5.setText("");
 
-        h3.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h4.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h5.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
+        }
+
     }//GEN-LAST:event_altura1KeyReleased
 
     private void radioM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioM1ActionPerformed
-        
+
     }//GEN-LAST:event_radioM1ActionPerformed
 
     private void radioM1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioM1KeyReleased
-        R1.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs2.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs3.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
+        try {
+            R1.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+            Rs2.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+            Rs3.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            R1.setText("");
+            Rs2.setText("");
+            Rs3.setText("");
+
+        }
+
     }//GEN-LAST:event_radioM1KeyReleased
 
     private void distancia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distancia1ActionPerformed
@@ -1651,18 +1793,39 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_distancia1ActionPerformed
 
     private void distancia1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distancia1KeyReleased
-        d3.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
-        d4.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
+        /*d3.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
+        d4.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());*/
+        try {
+            d3.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+            d4.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            d3.setText("");
+            d4.setText("");
+        }
+
+
     }//GEN-LAST:event_distancia1KeyReleased
 
     private void AlPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPre1ActionPerformed
-        h3.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h4.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h5.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
+        try {
+            h3.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+            h4.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+            h5.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            h3.setText("");
+            h4.setText("");
+            h5.setText("");
+        }
+
     }//GEN-LAST:event_AlPre1ActionPerformed
 
     private void prefijos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos2ActionPerformed
-        carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString());
+        try {
+            carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
+        } catch (Exception e) {
+            carga1.setText("");
+        }
+
     }//GEN-LAST:event_prefijos2ActionPerformed
 
     private void prefijos2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijos2KeyReleased
@@ -1670,18 +1833,44 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_prefijos2KeyReleased
 
     private void RPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPre1ActionPerformed
-        R1.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs2.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs3.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
+        try {
+            R1.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+            Rs2.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+            Rs3.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            R1.setText("");
+            Rs2.setText("");
+            Rs3.setText("");
+        }
+
     }//GEN-LAST:event_RPre1ActionPerformed
 
     private void dPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPre1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            d3.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+            d4.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            d3.setText("");
+            d4.setText("");
+        }
+
     }//GEN-LAST:event_dPre1ActionPerformed
 
-    private void CalcularCECHueco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHueco1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalcularCECHueco1ActionPerformed
+    private void CalcularCECilindroSolidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECilindroSolidoActionPerformed
+        try {
+
+            Double carga = conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()),
+                    altura = conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()),
+                    distancia = conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()),
+                    radio = conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()),
+                    campo;
+            campo = ((2 * k * carga) / (Math.pow(radio, 2) * altura)) * (altura + (Math.sqrt(Math.pow(distancia, 2) + Math.pow(radio, 2))) - (Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radio, 2))));
+            double AbsoluteField = Math.abs(campo);
+            this.valor.setText(conversion.prefijos2(AbsoluteField) + " V/m");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_CalcularCECilindroSolidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1723,7 +1912,9 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> AlPre1;
     private javax.swing.JComboBox<String> CR;
     private javax.swing.JButton CalcularCECHueco;
-    private javax.swing.JButton CalcularCECHueco1;
+    private javax.swing.JButton CalcularCECilindroSolido;
+    private javax.swing.JButton CalcularDisco;
+    private javax.swing.JLabel CampoDisco;
     private javax.swing.JPanel CampoElectrico;
     private javax.swing.JComboBox<String> Cx;
     private javax.swing.JLabel R;
@@ -1767,7 +1958,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1781,7 +1971,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -1844,6 +2033,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel resultado;
     private javax.swing.JTextField vR;
     private javax.swing.JTextField vX;
+    private javax.swing.JLabel valor;
     private javax.swing.JLabel x;
     private javax.swing.JLabel x2;
     // End of variables declaration//GEN-END:variables
