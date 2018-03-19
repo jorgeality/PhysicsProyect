@@ -85,7 +85,7 @@ public class Index extends javax.swing.JFrame {
         jLabel29 = new javax.swing.JLabel();
         RPre1 = new javax.swing.JComboBox<String>();
         dPre1 = new javax.swing.JComboBox<String>();
-        CalcularCECHueco1 = new javax.swing.JButton();
+        CalcularCECilindroSolido = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         carga1 = new javax.swing.JLabel();
         h3 = new javax.swing.JLabel();
@@ -545,10 +545,10 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        CalcularCECHueco1.setText("Calcular");
-        CalcularCECHueco1.addActionListener(new java.awt.event.ActionListener() {
+        CalcularCECilindroSolido.setText("Calcular");
+        CalcularCECilindroSolido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CalcularCECHueco1ActionPerformed(evt);
+                CalcularCECilindroSolidoActionPerformed(evt);
             }
         });
 
@@ -591,7 +591,7 @@ public class Index extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(78, 78, 78)
-                .addComponent(CalcularCECHueco1)
+                .addComponent(CalcularCECilindroSolido)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -619,7 +619,7 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(distancia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dPre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(CalcularCECHueco1)
+                .addComponent(CalcularCECilindroSolido)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
@@ -1420,7 +1420,7 @@ public class Index extends javax.swing.JFrame {
             campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radioM, 2))));
             //seteos de variables
 
-            this.resultado.setText(String.valueOf(Math.abs(campo)));
+            this.resultado.setText(String.valueOf(Math.abs(campo))+ "C");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
         }
@@ -1434,7 +1434,7 @@ public class Index extends javax.swing.JFrame {
                    radio = conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()),
                    campo;
                    campo = (2*Math.PI*k*(carga/Math.pow(distancia, 2)))*(1-(distancia/(Math.sqrt(Math.pow(radio, 2)+Math.pow(distancia, 2)))));
-                   this.CampoDisco.setText(campo+ " C");
+                   this.CampoDisco.setText( Math.abs(campo)+ " C");
            
         } catch(Exception e){
             JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
@@ -1651,7 +1651,9 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_cargas1KeyPressed
 
     private void cargas1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargas1KeyReleased
-        carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString()+"C");
+        //carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString()+"C");
+        Constantes conversion = new Constantes();
+        carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
     }//GEN-LAST:event_cargas1KeyReleased
 
     private void cargas1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargas1KeyTyped
@@ -1663,10 +1665,10 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_altura1ActionPerformed
 
     private void altura1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_altura1KeyReleased
-
-        h3.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h4.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h5.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        h3.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        h4.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        h5.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_altura1KeyReleased
 
     private void radioM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioM1ActionPerformed
@@ -1674,9 +1676,10 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_radioM1ActionPerformed
 
     private void radioM1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioM1KeyReleased
-        R1.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs2.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs3.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        R1.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        Rs2.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        Rs3.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_radioM1KeyReleased
 
     private void distancia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_distancia1ActionPerformed
@@ -1686,17 +1689,21 @@ public class Index extends javax.swing.JFrame {
     private void distancia1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distancia1KeyReleased
         /*d3.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());
         d4.setText(distancia1.getText().toString() + dPre1.getSelectedItem().toString());*/
+        Constantes conversion = new Constantes();
+        d3.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+        d4.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_distancia1KeyReleased
 
     private void AlPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlPre1ActionPerformed
-        h3.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h4.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
-        h5.setText(altura1.getText().toString() + AlPre1.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        h3.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        h4.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
+        h5.setText(conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_AlPre1ActionPerformed
 
     private void prefijos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos2ActionPerformed
         Constantes conversion = new Constantes();
-        carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
+        carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
     }//GEN-LAST:event_prefijos2ActionPerformed
 
     private void prefijos2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_prefijos2KeyReleased
@@ -1704,18 +1711,32 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_prefijos2KeyReleased
 
     private void RPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RPre1ActionPerformed
-        R1.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs2.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
-        Rs3.setText(radioM1.getText().toString() + RPre1.getSelectedItem().toString());
+        Constantes conversion = new Constantes();
+        R1.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        Rs2.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
+        Rs3.setText(conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_RPre1ActionPerformed
 
     private void dPre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPre1ActionPerformed
-        // TODO add your handling code here:
+        Constantes conversion = new Constantes();
+        d3.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
+        d4.setText(conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()) + "m");
     }//GEN-LAST:event_dPre1ActionPerformed
 
-    private void CalcularCECHueco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHueco1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CalcularCECHueco1ActionPerformed
+    private void CalcularCECilindroSolidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECilindroSolidoActionPerformed
+        try{
+            Constantes conversion = new Constantes();
+           Double  carga = conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()),
+                   altura = conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()),
+                   distancia = conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()),
+                   radio = conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()),
+                   campo;
+           campo = ((2*k*carga)/(Math.pow(radio, 2)*altura))*((altura+Math.sqrt(Math.pow(distancia, 2)+Math.pow(radio, 2)))-(Math.sqrt(Math.pow(distancia+altura, 2))+ Math.pow(radio, 2)));
+           this.jLabel31.setText(Math.abs(campo)+" C");
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_CalcularCECilindroSolidoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1757,7 +1778,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> AlPre1;
     private javax.swing.JComboBox<String> CR;
     private javax.swing.JButton CalcularCECHueco;
-    private javax.swing.JButton CalcularCECHueco1;
+    private javax.swing.JButton CalcularCECilindroSolido;
     private javax.swing.JButton CalcularDisco;
     private javax.swing.JLabel CampoDisco;
     private javax.swing.JPanel CampoElectrico;
