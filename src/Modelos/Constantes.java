@@ -14,23 +14,6 @@ import java.text.DecimalFormatSymbols;
  */
 public class Constantes {
 
-    static final Double E = Math.pow(10, 18);
-    static final Double P = Math.pow(10, 15);
-    static final Double T = Math.pow(10, 12);
-    static final Double G = Math.pow(10, 9);
-    static final Double M = Math.pow(10, 6);
-    static final Double k = Math.pow(10, 3);
-    static final Double h = Math.pow(10, 2);
-    static final Double da = Math.pow(10, 1);
-    static final Double d = Math.pow(10, -1);
-    static final Double c = Math.pow(10, -2);
-    static final Double m = Math.pow(10, -3);
-    static final Double µ = Math.pow(10, -6);
-    static final Double n = Math.pow(10, -9);
-    static final Double p = Math.pow(10, -12);
-    static final Double f = Math.pow(10, -15);
-    static final Double a = Math.pow(10, -18);
-
     public Double convercionCarga(double medida, String prefijo) {
         double carga = 0.0;
         if (prefijo.equals("E")) {
@@ -73,9 +56,10 @@ public class Constantes {
 
     public String prefijos2(Double number) {
         double resultado = 0.0;
-        String result = null;
-        if (number / 1E18 >= 1) {
+        String result = "";
+        if (number / 1E18 >= 1 ) {
             resultado = number / 1E18;
+            
             result = format(resultado) + "E";
 
         } else if (number / 1E15 >= 1 ) {
@@ -105,30 +89,32 @@ public class Constantes {
         } else if (number / 1E1 >= 1 ) {
             resultado = number / 1E1;
             result = format(resultado) + "da";
-        }else if (number / 1E-1 < 1 ) {
+        }else if (number / 1E-1 >= 1 ) {
             resultado = number / 1E-1;
             result = format(resultado) + "d";
-        }else if (number / 1E-2 < 1) {
+        }else if (number / 1E-2 >= 1) {
             resultado = number / 1E-2;
             result = format(resultado) + "c";
-        }else if (number / 1E-3 < 1) {
+        }else if (number / 1E-3 >= 1) {
             resultado = number / 1E-3;
             result = format(resultado) + "m";
-        }else if (number / 1E-6 < 1) {
+        }else if (number / 1E-6 >= 1) {
             resultado = number / 1E-6;
             result = format(resultado) + "µ";
-        }else if (number / 1E-9 < 1) {
+        }else if (number / 1E-9 >= 1) {
             resultado = number / 1E-9;
             result = format(resultado) + "n";
-        }else if (number / 1E-12 < 1) {
+        }else if (number / 1E-12 >= 1) {
             resultado = number / 1E-12;
             result = format(resultado) + "p";
-        }else if (number / 1E-15 < 1) {
-            resultado = number / 1E-6;
+        }else if (number / 1E-15 >= 1) {
+            resultado = number / 1E-15;
             result = format(resultado) + "f";
-        }else if (number / 1E-18 < 1) {
+        }else if (number / 1E-18 >= 1) {
             resultado = number / 1E-18;
             result = format(resultado) + "a";
+        }else{
+            result = number.toString();         
         }
         return result;
 
@@ -151,9 +137,15 @@ public class Constantes {
         decimalFormatSymbols.setDecimalSeparator('.');
         decimalFormatSymbols.setGroupingSeparator(',');
         DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", decimalFormatSymbols);
-
-        String regreso = decimalFormat.format(number).toString();
-
+        String regreso ="";
+        if(number >=0.01){
+            regreso = decimalFormat.format(number).toString();
+        }else{
+        decimalFormat = new DecimalFormat("#,##0.00", decimalFormatSymbols);
+        regreso= decimalFormat.format(number).toString();
+        }
+        
+        
         return regreso;
     }
 }
