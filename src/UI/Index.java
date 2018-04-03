@@ -51,12 +51,12 @@ public class Index extends javax.swing.JFrame {
         radioM = new javax.swing.JTextField();
         radiom = new javax.swing.JTextField();
         distancia = new javax.swing.JTextField();
-        AlPre = new javax.swing.JComboBox<String>();
-        prefijos = new javax.swing.JComboBox<String>();
+        AlPre = new javax.swing.JComboBox<>();
+        prefijos = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        RPre = new javax.swing.JComboBox<String>();
-        rPre = new javax.swing.JComboBox<String>();
-        dPre = new javax.swing.JComboBox<String>();
+        RPre = new javax.swing.JComboBox<>();
+        rPre = new javax.swing.JComboBox<>();
+        dPre = new javax.swing.JComboBox<>();
         CalcularCECHueco = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -81,11 +81,11 @@ public class Index extends javax.swing.JFrame {
         altura1 = new javax.swing.JTextField();
         radioM1 = new javax.swing.JTextField();
         distancia1 = new javax.swing.JTextField();
-        AlPre1 = new javax.swing.JComboBox<String>();
-        prefijos2 = new javax.swing.JComboBox<String>();
+        AlPre1 = new javax.swing.JComboBox<>();
+        prefijos2 = new javax.swing.JComboBox<>();
         jLabel29 = new javax.swing.JLabel();
-        RPre1 = new javax.swing.JComboBox<String>();
-        dPre1 = new javax.swing.JComboBox<String>();
+        RPre1 = new javax.swing.JComboBox<>();
+        dPre1 = new javax.swing.JComboBox<>();
         CalcularCECilindroSolido = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         carga1 = new javax.swing.JLabel();
@@ -108,11 +108,11 @@ public class Index extends javax.swing.JFrame {
         vX = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         vR = new javax.swing.JTextField();
-        Cx = new javax.swing.JComboBox<String>();
-        CR = new javax.swing.JComboBox<String>();
+        Cx = new javax.swing.JComboBox<>();
+        CR = new javax.swing.JComboBox<>();
         jLabel17 = new javax.swing.JLabel();
         cargadisco = new javax.swing.JTextField();
-        prefijos1 = new javax.swing.JComboBox<String>();
+        prefijos1 = new javax.swing.JComboBox<>();
         jLabel20 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         x = new javax.swing.JLabel();
@@ -258,14 +258,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        AlPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        AlPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         AlPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AlPreActionPerformed(evt);
             }
         });
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G", "M", "k", "h", "da", "", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijosActionPerformed(evt);
@@ -280,21 +280,21 @@ public class Index extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("C");
 
-        RPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        RPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         RPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RPreActionPerformed(evt);
             }
         });
 
-        rPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        rPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         rPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rPreActionPerformed(evt);
             }
         });
 
-        dPre.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        dPre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         dPre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dPreActionPerformed(evt);
@@ -513,14 +513,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        AlPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        AlPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         AlPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AlPre1ActionPerformed(evt);
             }
         });
 
-        prefijos2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G", "M", "k", "h", "da", "", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos2ActionPerformed(evt);
@@ -535,14 +535,14 @@ public class Index extends javax.swing.JFrame {
         jLabel29.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel29.setText("C");
 
-        RPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        RPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         RPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RPre1ActionPerformed(evt);
             }
         });
 
-        dPre1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "m", "cm", "mm" }));
+        dPre1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "m", "cm", "mm" }));
         dPre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dPre1ActionPerformed(evt);
@@ -756,14 +756,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Cx.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mt", "cm", "mm" }));
+        Cx.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "mt", "cm", "mm" }));
         Cx.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CxActionPerformed(evt);
             }
         });
 
-        CR.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "mt", "cm", "mm" }));
+        CR.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "mt", "cm", "mm" }));
         CR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CRActionPerformed(evt);
@@ -784,7 +784,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "E", "P", "T", "G ", "M", "k", "h", "da", " ", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "P", "T", "G", "M", "k", "h", "da", "", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos1ActionPerformed(evt);
@@ -878,8 +878,9 @@ public class Index extends javax.swing.JFrame {
         R3.setBounds(250, 75, 50, 20);
 
         carg.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        carg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jPanel6.add(carg);
-        carg.setBounds(245, 50, 60, 20);
+        carg.setBounds(235, 50, 80, 20);
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/formulaDisco.png"))); // NOI18N
         jPanel6.add(jLabel23);
@@ -1421,11 +1422,11 @@ public class Index extends javax.swing.JFrame {
 
     private void CalcularCECHuecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECHuecoActionPerformed
         try {
-
+            String cargas = conversion.convercionCarga1(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString());
             double altura = conversion.convercionLongitud(Double.parseDouble(this.altura.getText()), this.AlPre.getSelectedItem().toString()),
                     radioM = conversion.convercionLongitud(Double.parseDouble(this.radioM.getText()), this.RPre.getSelectedItem().toString()),
                     radio = conversion.convercionLongitud(Double.parseDouble(this.radiom.getText()), this.rPre.getSelectedItem().toString()),
-                    carga = conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()),
+                    carga = Double.parseDouble(cargas),
                     distancia = conversion.convercionLongitud(Double.parseDouble(this.distancia.getText()), this.dPre.getSelectedItem().toString()), campo;
             campo = ((k * carga) / altura) * (-(1 / Math.sqrt(Math.pow(distancia + altura, 2) + Math.pow(radioM, 2))) - (1 / Math.sqrt(Math.pow(distancia, 2) + Math.pow(radio, 2))));
             //seteos de variables
@@ -1438,9 +1439,9 @@ public class Index extends javax.swing.JFrame {
 
     private void CalcularDiscoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularDiscoActionPerformed
         try {
-
+             String cargas = conversion.convercionCarga1(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString());
             double distancia = conversion.convercionLongitud(Double.parseDouble(this.vX.getText().toString()), this.Cx.getSelectedItem().toString()),
-                    carga = conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()),
+                    carga = Double.parseDouble(cargas),
                     radio = conversion.convercionLongitud(Double.parseDouble(this.vR.getText().toString()), this.CR.getSelectedItem().toString()),
                     campo;
             campo = (2 * Math.PI * k * (carga / (Math.PI * Math.pow(radio, 2)))) * (1 - (distancia / (Math.sqrt(Math.pow(radio, 2) + Math.pow(distancia, 2)))));
@@ -1533,7 +1534,7 @@ public class Index extends javax.swing.JFrame {
 
     private void cargasKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargasKeyReleased
         try {
-            this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
+            this.carga.setText(conversion.convercionCarga1(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
             this.carga.setText("");
         }
@@ -1599,7 +1600,7 @@ public class Index extends javax.swing.JFrame {
 
     private void prefijosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijosActionPerformed
         try {
-            this.carga.setText(conversion.convercionCarga(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
+            this.carga.setText(conversion.convercionCarga1(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
             this.carga.setText("");
         }
@@ -1715,7 +1716,7 @@ public class Index extends javax.swing.JFrame {
 
     private void cargadiscoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargadiscoKeyReleased
         try {
-            carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
+            carg.setText(conversion.convercionCarga1(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
 
         } catch (Exception e) {
             carg.setText("");
@@ -1725,7 +1726,7 @@ public class Index extends javax.swing.JFrame {
 
     private void prefijos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos1ActionPerformed
         try {
-            carg.setText(conversion.convercionCarga(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
+            carg.setText(conversion.convercionCarga1(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
             carg.setText("");
         }
@@ -1747,7 +1748,7 @@ public class Index extends javax.swing.JFrame {
     private void cargas1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cargas1KeyReleased
         //carga1.setText(cargas1.getText().toString() + prefijos1.getSelectedItem().toString()+"C");
         try {
-            carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
+            carga1.setText(conversion.convercionCarga1(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
             carga1.setText("");
         }
@@ -1827,7 +1828,7 @@ public class Index extends javax.swing.JFrame {
 
     private void prefijos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijos2ActionPerformed
         try {
-            carga1.setText(conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
+            carga1.setText(conversion.convercionCarga1(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
             carga1.setText("");
         }
@@ -1864,8 +1865,8 @@ public class Index extends javax.swing.JFrame {
 
     private void CalcularCECilindroSolidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularCECilindroSolidoActionPerformed
         try {
-
-            Double carga = conversion.convercionCarga(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()),
+            String cargas =conversion.convercionCarga1(Double.parseDouble(cargas1.getText().toString()), prefijos2.getSelectedItem().toString()); 
+            Double carga = Double.parseDouble(cargas),
                     altura = conversion.convercionLongitud(Double.parseDouble(altura1.getText().toString()), AlPre1.getSelectedItem().toString()),
                     distancia = conversion.convercionLongitud(Double.parseDouble(distancia1.getText().toString()), dPre1.getSelectedItem().toString()),
                     radio = conversion.convercionLongitud(Double.parseDouble(radioM1.getText().toString()), RPre1.getSelectedItem().toString()),

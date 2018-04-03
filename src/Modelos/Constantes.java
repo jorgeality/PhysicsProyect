@@ -14,42 +14,60 @@ import java.text.DecimalFormatSymbols;
  */
 public class Constantes {
 
-    public Double convercionCarga(double medida, String prefijo) {
-        double carga = 0.0;
+     public String convercionCarga1(double medida, String prefijo) {
+        String carga = "";
+        System.out.println("p: "+prefijo+"h");
         if (prefijo.equals("E")) {
-            carga = medida * Math.pow(10, 18);
+            System.out.println("E");
+            carga = medida+"E18";
         } else if (prefijo.equals("P")) {
-            carga = medida * Math.pow(10, 15);
+            System.out.println("P");
+            carga = medida+"E15";
         } else if (prefijo.equals("T")) {
-            carga = medida * Math.pow(10, 12);
+            System.out.println("T");
+            carga = medida+"E12";
         } else if (prefijo.equals("G")) {
-            carga = medida * Math.pow(10, 9);
+            System.out.println("G");
+           carga = medida+"E9";
         } else if (prefijo.equals("M")) {
-            carga = medida * Math.pow(10, 6);
+            System.out.println("M");
+            carga = medida+"E6";
         } else if (prefijo.equals("k")) {
-            carga = medida * Math.pow(10, 3);
+            System.out.println("k");
+            carga = medida+"E3";
         } else if (prefijo.equals("h")) {
-            carga = medida * Math.pow(10, 2);
+            System.out.println("h");
+            carga = medida+"E2";
         } else if (prefijo.equals("da")) {
-            carga = medida * Math.pow(10, 1);
+            System.out.println("da");
+            carga = medida+"E1";
         } else if (prefijo.equals("d")) {
-            carga = medida * Math.pow(10, -1);
+            System.out.println("d");
+            carga = medida+"E-1";
         } else if (prefijo.equals("c")) {
-            carga = medida * Math.pow(10, -2);
+            System.out.println("c");
+            carga = medida+"E-2";
         } else if (prefijo.equals("m")) {
-            carga = medida * Math.pow(10, -3);
+            System.out.println("m");
+            carga = medida+"E-3";
         } else if (prefijo.equals("µ")) {
-            carga = medida * Math.pow(10, -6);
+            System.out.println("miu");
+            carga = medida+"E-6";
         } else if (prefijo.equals("n")) {
-            carga = medida * Math.pow(10, -9);
+            System.out.println("n");
+            carga = medida+"E-9";
         } else if (prefijo.equals("p")) {
-            carga = medida * Math.pow(10, -12);
+            System.out.println("p");
+            carga = medida+"E-12";
         } else if (prefijo.equals("f")) {
-            carga = medida * Math.pow(10, -15);
+            System.out.println("f");
+            carga = medida+"E-15";
         } else if (prefijo.equals("a")) {
-            carga = medida * Math.pow(10, -18);
+            System.out.println("a");
+            carga = medida+"E-18";
         } else {
-            carga = medida;
+            
+            carga = medida+"";
         }
         return carga;
     }
