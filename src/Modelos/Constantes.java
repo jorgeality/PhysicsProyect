@@ -132,7 +132,7 @@ public class Constantes {
             resultado = number / 1E-18;
             result = format(resultado) + "a";
         }else{
-            result = number.toString();         
+            result = formatExp(number);         
         }
         return result;
 
@@ -156,14 +156,19 @@ public class Constantes {
         decimalFormatSymbols.setGroupingSeparator(',');
         DecimalFormat decimalFormat = new DecimalFormat("#,##0.00", decimalFormatSymbols);
         String regreso ="";
-        if(number >=0.01){
+        //if(number >=0.01){
             regreso = decimalFormat.format(number).toString();
-        }else{
+        /*}else{
         decimalFormat = new DecimalFormat("#,##0.00", decimalFormatSymbols);
         regreso= decimalFormat.format(number).toString();
-        }
-        
-        
+        }*/
+        return regreso;
+    }
+    public String formatExp(Double number) {
+        DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+        DecimalFormat decimalFormat = new DecimalFormat("0E0", decimalFormatSymbols);
+        String regreso ="";
+            regreso = decimalFormat.format(number).toString();
         return regreso;
     }
 }
