@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  */
 public class Index extends javax.swing.JFrame {
 
-    final double k = 9E9;
+    final double k = 8.98E9, M= (4*Math.PI)*Math.pow(10, -7);
     Constantes conversion = new Constantes();
 
     /**
@@ -51,12 +51,12 @@ public class Index extends javax.swing.JFrame {
         altura = new javax.swing.JTextField();
         radioM = new javax.swing.JTextField();
         distancia = new javax.swing.JTextField();
-        prefijos = new javax.swing.JComboBox<>();
+        prefijos = new javax.swing.JComboBox<String>();
         jLabel2 = new javax.swing.JLabel();
         CalcularCECHueco = new javax.swing.JButton();
-        Hprefi = new javax.swing.JComboBox<>();
-        Rprefi = new javax.swing.JComboBox<>();
-        Dprefi = new javax.swing.JComboBox<>();
+        Hprefi = new javax.swing.JComboBox<String>();
+        Rprefi = new javax.swing.JComboBox<String>();
+        Dprefi = new javax.swing.JComboBox<String>();
         jLabel18 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -83,12 +83,12 @@ public class Index extends javax.swing.JFrame {
         altura1 = new javax.swing.JTextField();
         radioM1 = new javax.swing.JTextField();
         distancia1 = new javax.swing.JTextField();
-        prefijos2 = new javax.swing.JComboBox<>();
+        prefijos2 = new javax.swing.JComboBox<String>();
         jLabel29 = new javax.swing.JLabel();
         CalcularCECilindroSolido = new javax.swing.JButton();
-        Hprefi1 = new javax.swing.JComboBox<>();
-        Hprefi2 = new javax.swing.JComboBox<>();
-        Hprefi3 = new javax.swing.JComboBox<>();
+        Hprefi1 = new javax.swing.JComboBox<String>();
+        Hprefi2 = new javax.swing.JComboBox<String>();
+        Hprefi3 = new javax.swing.JComboBox<String>();
         jLabel30 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
@@ -115,10 +115,10 @@ public class Index extends javax.swing.JFrame {
         vR = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         cargadisco = new javax.swing.JTextField();
-        prefijos1 = new javax.swing.JComboBox<>();
+        prefijos1 = new javax.swing.JComboBox<String>();
         jLabel20 = new javax.swing.JLabel();
-        Cx1 = new javax.swing.JComboBox<>();
-        CR1 = new javax.swing.JComboBox<>();
+        Cx1 = new javax.swing.JComboBox<String>();
+        CR1 = new javax.swing.JComboBox<String>();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -138,19 +138,19 @@ public class Index extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        corrienteBC = new javax.swing.JTextField();
+        radioABC = new javax.swing.JTextField();
+        numerBC = new javax.swing.JTextField();
+        prefijoIBC = new javax.swing.JComboBox<String>();
+        prefijoABC = new javax.swing.JComboBox<String>();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
+        Bcentro = new javax.swing.JLabel();
+        aBC = new javax.swing.JLabel();
+        numBC = new javax.swing.JLabel();
+        mCorrienteBC = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jPanel24 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
@@ -160,24 +160,24 @@ public class Index extends javax.swing.JFrame {
         jLabel50 = new javax.swing.JLabel();
         jLabel51 = new javax.swing.JLabel();
         jLabel52 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        corrienteBP = new javax.swing.JTextField();
+        radioBP = new javax.swing.JTextField();
+        distanciaBP = new javax.swing.JTextField();
+        numeroBP = new javax.swing.JTextField();
+        prefijoIBP = new javax.swing.JComboBox<String>();
+        prefijoBP = new javax.swing.JComboBox<String>();
+        prefijoXBP = new javax.swing.JComboBox<String>();
         jButton2 = new javax.swing.JButton();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
+        iBP = new javax.swing.JLabel();
+        aBP = new javax.swing.JLabel();
+        nBP = new javax.swing.JLabel();
+        XBP = new javax.swing.JLabel();
+        ABP = new javax.swing.JLabel();
+        BP = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         jPanel25 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
@@ -187,36 +187,36 @@ public class Index extends javax.swing.JFrame {
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
         jLabel60 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        corrienteT = new javax.swing.JTextField();
+        numeroT = new javax.swing.JTextField();
+        radioT = new javax.swing.JTextField();
+        prefijoIT = new javax.swing.JComboBox<String>();
+        prefijoRT = new javax.swing.JComboBox<String>();
         jLabel64 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
+        nT = new javax.swing.JLabel();
+        cT = new javax.swing.JLabel();
+        rT = new javax.swing.JLabel();
+        BT = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
         jPanel26 = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
         jLabel74 = new javax.swing.JLabel();
         jPanel28 = new javax.swing.JPanel();
         jButton16 = new javax.swing.JButton();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        corrienteA = new javax.swing.JTextField();
+        radioLA = new javax.swing.JTextField();
         jLabel66 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
+        prefijoRLA = new javax.swing.JComboBox<String>();
+        prefijoLA = new javax.swing.JComboBox<String>();
         jLabel75 = new javax.swing.JLabel();
         jLabel76 = new javax.swing.JLabel();
         jPanel29 = new javax.swing.JPanel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel73 = new javax.swing.JLabel();
+        rA = new javax.swing.JLabel();
+        BA = new javax.swing.JLabel();
+        IA = new javax.swing.JLabel();
         jLabel68 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -303,7 +303,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijosActionPerformed(evt);
@@ -325,7 +325,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Hprefi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Hprefi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Hprefi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HprefiActionPerformed(evt);
@@ -337,7 +337,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Rprefi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Rprefi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Rprefi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RprefiActionPerformed(evt);
@@ -349,7 +349,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Dprefi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Dprefi.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Dprefi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 DprefiActionPerformed(evt);
@@ -577,7 +577,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos2.setAutoscrolls(true);
         prefijos2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -600,7 +600,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Hprefi1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Hprefi1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Hprefi1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hprefi1ActionPerformed(evt);
@@ -612,7 +612,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Hprefi2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Hprefi2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Hprefi2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hprefi2ActionPerformed(evt);
@@ -624,7 +624,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        Hprefi3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Hprefi3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Hprefi3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hprefi3ActionPerformed(evt);
@@ -878,7 +878,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        prefijos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijos1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         prefijos1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 prefijos1ActionPerformed(evt);
@@ -893,7 +893,7 @@ public class Index extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel20.setText("C");
 
-        Cx1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        Cx1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         Cx1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Cx1ActionPerformed(evt);
@@ -905,7 +905,7 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        CR1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        CR1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
         CR1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CR1ActionPerformed(evt);
@@ -1096,45 +1096,65 @@ public class Index extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel14.setText("N");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        corrienteBC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                corrienteBCActionPerformed(evt);
+            }
+        });
+        corrienteBC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                corrienteBCKeyReleased(evt);
             }
         });
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        radioABC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                radioABCActionPerformed(evt);
+            }
+        });
+        radioABC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radioABCKeyReleased(evt);
             }
         });
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        numerBC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                numerBCActionPerformed(evt);
+            }
+        });
+        numerBC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numerBCKeyReleased(evt);
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        prefijoIBC.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoIBC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                prefijoIBCActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        prefijoABC.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoABC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                prefijoABCActionPerformed(evt);
             }
         });
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel12.setText("C");
+        jLabel12.setText("A");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("Mts");
 
         jButton1.setText("Calcular");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -1148,21 +1168,21 @@ public class Index extends javax.swing.JFrame {
                         .addGroup(jPanel14Layout.createSequentialGroup()
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radioABC, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoABC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel14Layout.createSequentialGroup()
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(numerBC, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel14Layout.createSequentialGroup()
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(corrienteBC, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoIBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
                             .addComponent(jLabel12))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1173,19 +1193,19 @@ public class Index extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(corrienteBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoIBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radioABC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoABC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numerBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1194,21 +1214,33 @@ public class Index extends javax.swing.JFrame {
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Resultados"));
         jPanel8.setLayout(null);
 
-        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jPanel8.add(jLabel37);
-        jLabel37.setBounds(650, 70, 110, 30);
+        Bcentro.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel8.add(Bcentro);
+        Bcentro.setBounds(650, 70, 110, 30);
 
-        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jPanel8.add(jLabel40);
-        jLabel40.setBounds(330, 100, 170, 20);
+        aBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel8.add(aBC);
+        aBC.setBounds(330, 100, 170, 20);
 
-        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jPanel8.add(jLabel42);
-        jLabel42.setBounds(430, 55, 160, 20);
+        numBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel8.add(numBC);
+        numBC.setBounds(430, 55, 160, 20);
 
-        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jPanel8.add(jLabel41);
-        jLabel41.setBounds(263, 55, 140, 20);
+        mCorrienteBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        mCorrienteBC.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+                mCorrienteBCInputMethodTextChanged(evt);
+            }
+        });
+        mCorrienteBC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                mCorrienteBCKeyReleased(evt);
+            }
+        });
+        jPanel8.add(mCorrienteBC);
+        mCorrienteBC.setBounds(263, 55, 140, 20);
 
         jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bcentro.png"))); // NOI18N
         jPanel8.add(jLabel36);
@@ -1276,30 +1308,53 @@ public class Index extends javax.swing.JFrame {
         jLabel52.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel52.setText("N");
 
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+        corrienteBP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                corrienteBPKeyReleased(evt);
             }
         });
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
+        radioBP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radioBPKeyReleased(evt);
             }
         });
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+        distanciaBP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                distanciaBPKeyReleased(evt);
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        numeroBP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                numeroBPActionPerformed(evt);
+            }
+        });
+        numeroBP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numeroBPKeyReleased(evt);
+            }
+        });
+
+        prefijoIBP.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoIBP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prefijoIBPActionPerformed(evt);
+            }
+        });
+
+        prefijoBP.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoBP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prefijoBPActionPerformed(evt);
+            }
+        });
+
+        prefijoXBP.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoXBP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prefijoXBPActionPerformed(evt);
             }
         });
 
@@ -1311,7 +1366,7 @@ public class Index extends javax.swing.JFrame {
         });
 
         jLabel61.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel61.setText("C");
+        jLabel61.setText("A");
 
         jLabel62.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel62.setText("Mts");
@@ -1329,26 +1384,26 @@ public class Index extends javax.swing.JFrame {
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel52)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(numeroBP, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel49)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField4))
+                        .addComponent(corrienteBP))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel50)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField5))
+                        .addComponent(radioBP))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel51)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(distanciaBP, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoXBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(prefijoIBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(29, 29, 29)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1368,13 +1423,13 @@ public class Index extends javax.swing.JFrame {
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel49)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(corrienteBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoIBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(11, 11, 11)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel50)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(radioBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -1382,13 +1437,13 @@ public class Index extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel51)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(distanciaBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoXBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel52)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(numeroBP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
@@ -1396,18 +1451,30 @@ public class Index extends javax.swing.JFrame {
 
         jPanel19.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Resultado"));
         jPanel19.setLayout(null);
-        jPanel19.add(jLabel39);
-        jLabel39.setBounds(140, 30, 130, 30);
-        jPanel19.add(jLabel43);
-        jLabel43.setBounds(300, 30, 140, 30);
-        jPanel19.add(jLabel44);
-        jLabel44.setBounds(480, 30, 150, 30);
-        jPanel19.add(jLabel45);
-        jLabel45.setBounds(190, 100, 150, 30);
-        jPanel19.add(jLabel46);
-        jLabel46.setBounds(410, 100, 130, 30);
-        jPanel19.add(jLabel47);
-        jLabel47.setBounds(680, 60, 100, 30);
+
+        iBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(iBP);
+        iBP.setBounds(150, 40, 130, 30);
+
+        aBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(aBP);
+        aBP.setBounds(310, 30, 140, 30);
+
+        nBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(nBP);
+        nBP.setBounds(490, 40, 150, 30);
+
+        XBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(XBP);
+        XBP.setBounds(210, 100, 150, 30);
+
+        ABP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(ABP);
+        ABP.setBounds(420, 100, 130, 30);
+
+        BP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel19.add(BP);
+        BP.setBounds(680, 60, 100, 30);
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bcen.png"))); // NOI18N
         jPanel19.add(jLabel38);
@@ -1478,22 +1545,40 @@ public class Index extends javax.swing.JFrame {
         jLabel60.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel60.setText("N");
 
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox6ActionPerformed(evt);
+        corrienteT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                corrienteTKeyReleased(evt);
             }
         });
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+        numeroT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                numeroTKeyReleased(evt);
+            }
+        });
+
+        radioT.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radioTKeyReleased(evt);
+            }
+        });
+
+        prefijoIT.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoIT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox7ActionPerformed(evt);
+                prefijoITActionPerformed(evt);
+            }
+        });
+
+        prefijoRT.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoRT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                prefijoRTActionPerformed(evt);
             }
         });
 
         jLabel64.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel64.setText("C");
+        jLabel64.setText("A");
 
         jLabel65.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel65.setText("Mts");
@@ -1516,13 +1601,13 @@ public class Index extends javax.swing.JFrame {
                         .addGap(3, 3, 3)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(jTextField8))
+                    .addComponent(numeroT, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radioT, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                    .addComponent(corrienteT))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prefijoIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoRT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1537,18 +1622,18 @@ public class Index extends javax.swing.JFrame {
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel58)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(corrienteT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoIT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(23, 23, 23)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel59)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radioT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(prefijoRT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(23, 23, 23)
                         .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel60)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(numeroT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton15)
@@ -1557,14 +1642,22 @@ public class Index extends javax.swing.JFrame {
 
         jPanel22.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Resultado"));
         jPanel22.setLayout(null);
-        jPanel22.add(jLabel54);
-        jLabel54.setBounds(170, 30, 140, 40);
-        jPanel22.add(jLabel55);
-        jLabel55.setBounds(330, 30, 160, 40);
-        jPanel22.add(jLabel56);
-        jLabel56.setBounds(250, 80, 170, 40);
-        jPanel22.add(jLabel57);
-        jLabel57.setBounds(540, 50, 170, 40);
+
+        nT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel22.add(nT);
+        nT.setBounds(180, 40, 130, 30);
+
+        cT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel22.add(cT);
+        cT.setBounds(340, 40, 140, 30);
+
+        rT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel22.add(rT);
+        rT.setBounds(250, 80, 160, 30);
+
+        BT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel22.add(BT);
+        BT.setBounds(540, 50, 170, 40);
 
         jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/toroidal.png"))); // NOI18N
         jPanel22.add(jLabel53);
@@ -1627,9 +1720,20 @@ public class Index extends javax.swing.JFrame {
             }
         });
 
-        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+        corrienteA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField11ActionPerformed(evt);
+                corrienteAActionPerformed(evt);
+            }
+        });
+        corrienteA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                corrienteAKeyReleased(evt);
+            }
+        });
+
+        radioLA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                radioLAKeyReleased(evt);
             }
         });
 
@@ -1639,17 +1743,17 @@ public class Index extends javax.swing.JFrame {
         jLabel70.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel70.setText("R");
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox8.addActionListener(new java.awt.event.ActionListener() {
+        prefijoRLA.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoRLA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox8ActionPerformed(evt);
+                prefijoRLAActionPerformed(evt);
             }
         });
 
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
-        jComboBox9.addActionListener(new java.awt.event.ActionListener() {
+        prefijoLA.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "", "E", "P", "T", "G", "M", "k", "h", "da", "d", "c", "m", "µ", "n", "p", "f", "a" }));
+        prefijoLA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox9ActionPerformed(evt);
+                prefijoLAActionPerformed(evt);
             }
         });
 
@@ -1670,12 +1774,12 @@ public class Index extends javax.swing.JFrame {
                     .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(corrienteA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radioLA, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prefijoLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoRLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel75)
@@ -1691,15 +1795,15 @@ public class Index extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(corrienteA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel66)
-                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(radioLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel70)
-                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(prefijoRLA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addComponent(jButton16)
@@ -1708,12 +1812,18 @@ public class Index extends javax.swing.JFrame {
 
         jPanel29.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Resultado"));
         jPanel29.setLayout(null);
-        jPanel29.add(jLabel69);
-        jLabel69.setBounds(210, 90, 170, 30);
-        jPanel29.add(jLabel72);
-        jLabel72.setBounds(430, 70, 140, 30);
-        jPanel29.add(jLabel73);
-        jLabel73.setBounds(220, 50, 140, 30);
+
+        rA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel29.add(rA);
+        rA.setBounds(210, 90, 170, 30);
+
+        BA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel29.add(BA);
+        BA.setBounds(430, 70, 140, 30);
+
+        IA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jPanel29.add(IA);
+        IA.setBounds(230, 50, 130, 30);
 
         jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ampereecu.png"))); // NOI18N
         jPanel29.add(jLabel68);
@@ -1795,11 +1905,32 @@ public class Index extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
-        // TODO add your handling code here:
+        try {
+            String corriente = conversion.convercionCarga1(Double.parseDouble(this.corrienteA.getText()), this.prefijoLA.getSelectedItem().toString());
+            double radio = Double.parseDouble(conversion.convercionCarga1(Double.parseDouble(this.radioLA.getText()), this.prefijoRLA.getSelectedItem().toString())),
+            corr= Double.parseDouble(corriente),
+            campo = (((4*Math.PI)*Math.pow(10, -7))*corr) /(2*Math.PI*radio);
+            //seteos de variables 
+            double AbsoluteField = Math.abs(campo);
+            this.BA.setText(conversion.prefijos2(AbsoluteField) + " T");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
-        // TODO add your handling code here:
+        try {
+            String corriente = conversion.convercionCarga1(Double.parseDouble(this.corrienteT.getText()), this.prefijoIT.getSelectedItem().toString());
+            double radio = Double.parseDouble(conversion.convercionCarga1(Double.parseDouble(this.radioT.getText()), this.prefijoRT.getSelectedItem().toString())),
+            numero = Double.parseDouble(this.numeroT.getText()),
+            corr= Double.parseDouble(corriente),
+            campo = (((4*Math.PI)*Math.pow(10, -7))*corr*numero) /(2*Math.PI*radio);
+            //seteos de variables 
+            double AbsoluteField = Math.abs(campo);
+            this.BT.setText(conversion.prefijos2(AbsoluteField) + " T");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void CR1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CR1KeyReleased
@@ -2199,65 +2330,236 @@ public class Index extends javax.swing.JFrame {
         //
     }//GEN-LAST:event_cargasActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void corrienteBCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_corrienteBCActionPerformed
+        //
+    }//GEN-LAST:event_corrienteBCActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void radioABCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioABCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_radioABCActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void numerBCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numerBCActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_numerBCActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void prefijoIBCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoIBCActionPerformed
+        try {
+            this.mCorrienteBC.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBC.getText()), this.prefijoIBC.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.mCorrienteBC.setText("");
+        }
+    }//GEN-LAST:event_prefijoIBCActionPerformed
 
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    private void prefijoABCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoABCActionPerformed
+        try {
+            this.aBC.setText(conversion.convercionCarga1(Double.parseDouble(this.radioABC.getText()), this.prefijoABC.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.aBC.setText("");
+        }
+    }//GEN-LAST:event_prefijoABCActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void numeroBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroBPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_numeroBPActionPerformed
 
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
+    private void prefijoIBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoIBPActionPerformed
+        try {
+            this.iBP.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBP.getText()), this.prefijoIBP.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.iBP.setText("");
+        }
+    }//GEN-LAST:event_prefijoIBPActionPerformed
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    private void prefijoBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoBPActionPerformed
+        try {
+            this.ABP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
+            this.aBP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.ABP.setText("");
+            this.aBP.setText("");
+        }
+    }//GEN-LAST:event_prefijoBPActionPerformed
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    private void prefijoXBPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoXBPActionPerformed
+         try {
+            this.XBP.setText(conversion.convercionCarga1(Double.parseDouble(this.distanciaBP.getText()), this.prefijoXBP.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.XBP.setText("");
+        }
+    }//GEN-LAST:event_prefijoXBPActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+         try {
+            String corriente = conversion.convercionCarga1(Double.parseDouble(this.corrienteBP.getText()), this.prefijoIBP.getSelectedItem().toString());
+            double radio = Double.parseDouble(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString())),
+            numero = Double.parseDouble(this.numeroBP.getText()),
+            corr= Double.parseDouble(corriente),
+            distancia = Double.parseDouble(conversion.convercionCarga1(Double.parseDouble(this.distanciaBP.getText()), this.prefijoXBP.getSelectedItem().toString())),
+            campo = (((4*Math.PI)*Math.pow(10, -7))*corr*numero*(Math.pow(radio, 2))) /(2*(Math.pow(Math.pow(distancia, 2)+Math.pow(radio, 2),1.5)));
+            //seteos de variables 
+            double AbsoluteField = Math.abs(campo);
+            this.BP.setText(conversion.prefijos2(AbsoluteField) + " T");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jComboBox6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox6ActionPerformed
+    private void prefijoITActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoITActionPerformed
+        try {
+            this.cT.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteT.getText()), this.prefijoIT.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.cT.setText("");
+        }
+    }//GEN-LAST:event_prefijoITActionPerformed
 
-    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox7ActionPerformed
+    private void prefijoRTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoRTActionPerformed
+        try {
+            this.cT.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteT.getText()), this.prefijoIT.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.cT.setText("");
+        }
+    }//GEN-LAST:event_prefijoRTActionPerformed
 
-    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+    private void corrienteAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_corrienteAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField11ActionPerformed
+    }//GEN-LAST:event_corrienteAActionPerformed
 
-    private void jComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox8ActionPerformed
+    private void prefijoRLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoRLAActionPerformed
+        try {
+            this.rA.setText(conversion.convercionCarga1(Double.parseDouble(this.radioLA.getText()), this.prefijoRLA.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.rA.setText("");
+        }
+    }//GEN-LAST:event_prefijoRLAActionPerformed
 
-    private void jComboBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox9ActionPerformed
+    private void prefijoLAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prefijoLAActionPerformed
+        try {
+            this.IA.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteA.getText()), this.prefijoLA.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.IA.setText("");
+        }
+    }//GEN-LAST:event_prefijoLAActionPerformed
+
+    private void mCorrienteBCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_mCorrienteBCKeyReleased
+        //
+    }//GEN-LAST:event_mCorrienteBCKeyReleased
+
+    private void mCorrienteBCInputMethodTextChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_mCorrienteBCInputMethodTextChanged
+        //
+    }//GEN-LAST:event_mCorrienteBCInputMethodTextChanged
+
+    private void corrienteBCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_corrienteBCKeyReleased
+        try {
+            this.mCorrienteBC.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBC.getText()), this.prefijoIBC.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.mCorrienteBC.setText("");
+        }
+    }//GEN-LAST:event_corrienteBCKeyReleased
+
+    private void radioABCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioABCKeyReleased
+        try {
+            this.aBC.setText(conversion.convercionCarga1(Double.parseDouble(this.radioABC.getText()), this.prefijoABC.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.aBC.setText("");
+        }
+    }//GEN-LAST:event_radioABCKeyReleased
+
+    private void numerBCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numerBCKeyReleased
+        try {
+            this.numBC.setText(this.numerBC.getText());
+        } catch (Exception e) {
+            this.numBC.setText("");
+        }
+    }//GEN-LAST:event_numerBCKeyReleased
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            String corriente = conversion.convercionCarga1(Double.parseDouble(this.corrienteBC.getText()), this.prefijoIBC.getSelectedItem().toString());
+            double radio = Double.parseDouble(conversion.convercionCarga1(Double.parseDouble(this.radioABC.getText()), this.prefijoABC.getSelectedItem().toString())),
+            numero = Double.parseDouble(this.numerBC.getText()),
+            corr= Double.parseDouble(corriente),
+            campo = (((4*Math.PI)*Math.pow(10, -7))*corr*numero)/(2*radio);
+            //seteos de variables
+            double AbsoluteField = Math.abs(campo);
+            this.Bcentro.setText(conversion.prefijos2(AbsoluteField) + " T");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Opps, error los valores solo pueden ser numericos o debe llenar todos los campos");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void corrienteBPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_corrienteBPKeyReleased
+        try {
+            this.iBP.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBP.getText()), this.prefijoIBP.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.iBP.setText("");
+        }
+    }//GEN-LAST:event_corrienteBPKeyReleased
+
+    private void radioBPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioBPKeyReleased
+        try {
+            this.ABP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
+            this.aBP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.ABP.setText("");
+            this.aBP.setText("");
+        }
+    }//GEN-LAST:event_radioBPKeyReleased
+
+    private void distanciaBPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_distanciaBPKeyReleased
+        try {
+            this.XBP.setText(conversion.convercionCarga1(Double.parseDouble(this.distanciaBP.getText()), this.prefijoXBP.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.XBP.setText("");
+        }
+    }//GEN-LAST:event_distanciaBPKeyReleased
+
+    private void numeroBPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroBPKeyReleased
+        try {
+            this.nBP.setText(this.numeroBP.getText());
+        } catch (Exception e) {
+            this.nBP.setText("");
+        }
+    }//GEN-LAST:event_numeroBPKeyReleased
+
+    private void corrienteTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_corrienteTKeyReleased
+        try {
+            this.cT.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteT.getText()), this.prefijoIT.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.cT.setText("");
+        }
+    }//GEN-LAST:event_corrienteTKeyReleased
+
+    private void radioTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioTKeyReleased
+        try {
+            this.rT.setText(conversion.convercionCarga1(Double.parseDouble(this.radioT.getText()), this.prefijoRT.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.rT.setText("");
+        }
+    }//GEN-LAST:event_radioTKeyReleased
+
+    private void numeroTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTKeyReleased
+        try {
+            this.nT.setText(this.numeroT.getText());
+        } catch (Exception e) {
+            this.nT.setText("");
+        }
+    }//GEN-LAST:event_numeroTKeyReleased
+
+    private void corrienteAKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_corrienteAKeyReleased
+        try {
+            this.IA.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteA.getText()), this.prefijoLA.getSelectedItem().toString()) + "A");
+        } catch (Exception e) {
+            this.IA.setText("");
+        }
+    }//GEN-LAST:event_corrienteAKeyReleased
+
+    private void radioLAKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_radioLAKeyReleased
+        try {
+            this.rA.setText(conversion.convercionCarga1(Double.parseDouble(this.radioLA.getText()), this.prefijoRLA.getSelectedItem().toString()) + "m");
+        } catch (Exception e) {
+            this.rA.setText("");
+        }
+    }//GEN-LAST:event_radioLAKeyReleased
 
     /**
      * @param args the command line arguments
@@ -2295,6 +2597,11 @@ public class Index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ABP;
+    private javax.swing.JLabel BA;
+    private javax.swing.JLabel BP;
+    private javax.swing.JLabel BT;
+    private javax.swing.JLabel Bcentro;
     private javax.swing.JComboBox<String> CR1;
     private javax.swing.JButton CalcularCECHueco;
     private javax.swing.JButton CalcularCECilindroSolido;
@@ -2307,6 +2614,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Hprefi1;
     private javax.swing.JComboBox<String> Hprefi2;
     private javax.swing.JComboBox<String> Hprefi3;
+    private javax.swing.JLabel IA;
     private javax.swing.JLabel R;
     private javax.swing.JLabel R1;
     private javax.swing.JLabel R2;
@@ -2314,38 +2622,39 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> Rprefi;
     private javax.swing.JLabel Rs2;
     private javax.swing.JLabel Rs3;
+    private javax.swing.JLabel XBP;
+    private javax.swing.JLabel aBC;
+    private javax.swing.JLabel aBP;
     private javax.swing.JTextField altura;
     private javax.swing.JTextField altura1;
+    private javax.swing.JLabel cT;
     private javax.swing.JLabel carg;
     private javax.swing.JLabel carga;
     private javax.swing.JLabel carga1;
     private javax.swing.JTextField cargadisco;
     private javax.swing.JTextField cargas;
     private javax.swing.JTextField cargas1;
+    private javax.swing.JTextField corrienteA;
+    private javax.swing.JTextField corrienteBC;
+    private javax.swing.JTextField corrienteBP;
+    private javax.swing.JTextField corrienteT;
     private javax.swing.JLabel d1;
     private javax.swing.JLabel d2;
     private javax.swing.JLabel d3;
     private javax.swing.JLabel d4;
     private javax.swing.JTextField distancia;
     private javax.swing.JTextField distancia1;
+    private javax.swing.JTextField distanciaBP;
     private javax.swing.JLabel h1;
     private javax.swing.JLabel h2;
     private javax.swing.JLabel h3;
     private javax.swing.JLabel h4;
     private javax.swing.JLabel h5;
+    private javax.swing.JLabel iBP;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2376,18 +2685,8 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
@@ -2395,10 +2694,6 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
@@ -2410,12 +2705,9 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
@@ -2453,25 +2745,35 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel mCorrienteBC;
+    private javax.swing.JLabel nBP;
+    private javax.swing.JLabel nT;
+    private javax.swing.JLabel numBC;
+    private javax.swing.JTextField numerBC;
+    private javax.swing.JTextField numeroBP;
+    private javax.swing.JTextField numeroT;
     private javax.swing.JPanel panel2;
+    private javax.swing.JComboBox<String> prefijoABC;
+    private javax.swing.JComboBox<String> prefijoBP;
+    private javax.swing.JComboBox<String> prefijoIBC;
+    private javax.swing.JComboBox<String> prefijoIBP;
+    private javax.swing.JComboBox<String> prefijoIT;
+    private javax.swing.JComboBox<String> prefijoLA;
+    private javax.swing.JComboBox<String> prefijoRLA;
+    private javax.swing.JComboBox<String> prefijoRT;
+    private javax.swing.JComboBox<String> prefijoXBP;
     private javax.swing.JComboBox<String> prefijos;
     private javax.swing.JComboBox<String> prefijos1;
     private javax.swing.JComboBox<String> prefijos2;
     private javax.swing.JLabel r;
+    private javax.swing.JLabel rA;
+    private javax.swing.JLabel rT;
+    private javax.swing.JTextField radioABC;
+    private javax.swing.JTextField radioBP;
+    private javax.swing.JTextField radioLA;
     private javax.swing.JTextField radioM;
     private javax.swing.JTextField radioM1;
+    private javax.swing.JTextField radioT;
     private javax.swing.JLabel resultado;
     private javax.swing.JTextField vR;
     private javax.swing.JTextField vX;
