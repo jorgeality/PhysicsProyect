@@ -16,54 +16,37 @@ public class Constantes {
 
      public String convercionCarga1(double medida, String prefijo) {
         String carga = "";
-        System.out.println("p: "+prefijo+"h");
         if (prefijo.equals("E")) {
-            System.out.println("E");
             carga = medida+"E18";
         } else if (prefijo.equals("P")) {
-            System.out.println("P");
             carga = medida+"E15";
         } else if (prefijo.equals("T")) {
-            System.out.println("T");
             carga = medida+"E12";
         } else if (prefijo.equals("G")) {
-            System.out.println("G");
            carga = medida+"E9";
         } else if (prefijo.equals("M")) {
-            System.out.println("M");
             carga = medida+"E6";
         } else if (prefijo.equals("k")) {
-            System.out.println("k");
             carga = medida+"E3";
         } else if (prefijo.equals("h")) {
-            System.out.println("h");
             carga = medida+"E2";
         } else if (prefijo.equals("da")) {
-            System.out.println("da");
             carga = medida+"E1";
         } else if (prefijo.equals("d")) {
-            System.out.println("d");
             carga = medida+"E-1";
         } else if (prefijo.equals("c")) {
-            System.out.println("c");
             carga = medida+"E-2";
         } else if (prefijo.equals("m")) {
-            System.out.println("m");
             carga = medida+"E-3";
         } else if (prefijo.equals("µ")) {
-            System.out.println("miu");
             carga = medida+"E-6";
         } else if (prefijo.equals("n")) {
-            System.out.println("n");
             carga = medida+"E-9";
         } else if (prefijo.equals("p")) {
-            System.out.println("p");
             carga = medida+"E-12";
         } else if (prefijo.equals("f")) {
-            System.out.println("f");
             carga = medida+"E-15";
         } else if (prefijo.equals("a")) {
-            System.out.println("a");
             carga = medida+"E-18";
         } else {
             

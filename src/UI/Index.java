@@ -459,37 +459,44 @@ public class Index extends javax.swing.JFrame {
         jLabel7.setBounds(-10, 140, 615, 60);
 
         carga.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        carga.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        carga.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        carga.setText("Q");
         jPanel5.add(carga);
         carga.setBounds(103, 40, 85, 20);
 
         h1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         h1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        h1.setText("h");
         jPanel5.add(h1);
         h1.setBounds(65, 65, 110, 20);
 
         h2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        h2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        h2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        h2.setText("h");
         jPanel5.add(h2);
         h2.setBounds(285, 65, 60, 20);
 
         R.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        R.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        R.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        R.setText("R");
         jPanel5.add(R);
         R.setBounds(362, 65, 70, 20);
 
         r.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        r.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        r.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        r.setText("R");
         jPanel5.add(r);
         r.setBounds(540, 65, 70, 20);
 
         d1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        d1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        d1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d1.setText("d");
         jPanel5.add(d1);
         d1.setBounds(210, 65, 70, 20);
 
         d2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        d2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        d2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d2.setText("d");
         jPanel5.add(d2);
         d2.setBounds(465, 65, 65, 20);
 
@@ -519,7 +526,7 @@ public class Index extends javax.swing.JFrame {
         jLabel24.setText("Q");
 
         jLabel25.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel25.setText("H");
+        jLabel25.setText("h");
 
         jLabel26.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel26.setText("R");
@@ -728,45 +735,54 @@ public class Index extends javax.swing.JFrame {
         jPanel13.setLayout(null);
 
         carga1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        carga1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        carga1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        carga1.setText("Q");
         jPanel13.add(carga1);
         carga1.setBounds(115, 43, 80, 20);
 
         h3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        h3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        h3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        h3.setText("h");
         jPanel13.add(h3);
         h3.setBounds(115, 65, 60, 20);
 
         h4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         h4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        h4.setText("h");
         jPanel13.add(h4);
         h4.setBounds(170, 55, 50, 20);
 
         R1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         R1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        R1.setText("R");
         jPanel13.add(R1);
         R1.setBounds(340, 55, 50, 20);
 
         Rs2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         Rs2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Rs2.setText("R");
         jPanel13.add(Rs2);
         Rs2.setBounds(570, 55, 50, 20);
 
         d3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         d3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d3.setText("d");
         jPanel13.add(d3);
         d3.setBounds(430, 55, 50, 20);
 
         d4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         d4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        d4.setText("d");
         jPanel13.add(d4);
         d4.setBounds(260, 55, 50, 20);
 
         h5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        h5.setText("h");
         jPanel13.add(h5);
         h5.setBounds(490, 55, 50, 20);
 
         Rs3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        Rs3.setText("R");
         jPanel13.add(Rs3);
         Rs3.setBounds(60, 65, 50, 20);
 
@@ -992,23 +1008,28 @@ public class Index extends javax.swing.JFrame {
         jPanel6.setLayout(null);
 
         x.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        x.setText("X");
         jPanel6.add(x);
         x.setBounds(400, 50, 90, 20);
 
         x2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        x2.setText("X");
         jPanel6.add(x2);
         x2.setBounds(460, 75, 50, 20);
 
         R2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        R2.setText("R");
         jPanel6.add(R2);
         R2.setBounds(380, 75, 50, 20);
 
         R3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        R3.setText("R");
         jPanel6.add(R3);
         R3.setBounds(250, 75, 50, 20);
 
         carg.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         carg.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        carg.setText("Q");
         jPanel6.add(carg);
         carg.setBounds(235, 50, 80, 20);
 
@@ -1219,14 +1240,20 @@ public class Index extends javax.swing.JFrame {
         Bcentro.setBounds(650, 70, 110, 30);
 
         aBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        aBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        aBC.setText("a");
         jPanel8.add(aBC);
         aBC.setBounds(330, 100, 170, 20);
 
         numBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        numBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        numBC.setText("N");
         jPanel8.add(numBC);
         numBC.setBounds(430, 55, 160, 20);
 
         mCorrienteBC.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        mCorrienteBC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mCorrienteBC.setText("I");
         mCorrienteBC.addInputMethodListener(new java.awt.event.InputMethodListener() {
             public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
             }
@@ -1453,22 +1480,32 @@ public class Index extends javax.swing.JFrame {
         jPanel19.setLayout(null);
 
         iBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        iBP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        iBP.setText("I");
         jPanel19.add(iBP);
         iBP.setBounds(150, 40, 130, 30);
 
         aBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        aBP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        aBP.setText("a");
         jPanel19.add(aBP);
         aBP.setBounds(310, 30, 140, 30);
 
         nBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        nBP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nBP.setText("N");
         jPanel19.add(nBP);
         nBP.setBounds(490, 40, 150, 30);
 
         XBP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        XBP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        XBP.setText("x");
         jPanel19.add(XBP);
         XBP.setBounds(210, 100, 150, 30);
 
         ABP.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        ABP.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ABP.setText("a");
         jPanel19.add(ABP);
         ABP.setBounds(420, 100, 130, 30);
 
@@ -1644,14 +1681,20 @@ public class Index extends javax.swing.JFrame {
         jPanel22.setLayout(null);
 
         nT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        nT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nT.setText("N");
         jPanel22.add(nT);
         nT.setBounds(180, 40, 130, 30);
 
         cT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cT.setText("I");
         jPanel22.add(cT);
         cT.setBounds(340, 40, 140, 30);
 
         rT.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        rT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rT.setText("R");
         jPanel22.add(rT);
         rT.setBounds(250, 80, 160, 30);
 
@@ -1758,7 +1801,7 @@ public class Index extends javax.swing.JFrame {
         });
 
         jLabel75.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel75.setText("C");
+        jLabel75.setText("A");
 
         jLabel76.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel76.setText("Mts");
@@ -1814,6 +1857,8 @@ public class Index extends javax.swing.JFrame {
         jPanel29.setLayout(null);
 
         rA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        rA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        rA.setText("R");
         jPanel29.add(rA);
         rA.setBounds(210, 90, 170, 30);
 
@@ -1822,6 +1867,8 @@ public class Index extends javax.swing.JFrame {
         BA.setBounds(430, 70, 140, 30);
 
         IA.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        IA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        IA.setText("I");
         jPanel29.add(IA);
         IA.setBounds(230, 50, 130, 30);
 
@@ -1979,7 +2026,7 @@ public class Index extends javax.swing.JFrame {
             carg.setText(conversion.convercionCarga1(Double.parseDouble(cargadisco.getText().toString()), prefijos1.getSelectedItem().toString()) + "C");
 
         } catch (Exception e) {
-            carg.setText("");
+            carg.setText("Q");
         }
     }//GEN-LAST:event_cargadiscoKeyReleased
 
@@ -1994,8 +2041,8 @@ public class Index extends javax.swing.JFrame {
             this.R2.setText(conversion.convercionCarga1(Double.parseDouble(this.vR.getText().toString()), this.CR1.getSelectedItem().toString()) + "m");
             this.R3.setText(conversion.convercionCarga1(Double.parseDouble(this.vR.getText().toString()), this.CR1.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.R2.setText("");
-            this.R3.setText("");
+            this.R2.setText("R");
+            this.R3.setText("R");
         }
     }//GEN-LAST:event_vRKeyReleased
 
@@ -2009,8 +2056,8 @@ public class Index extends javax.swing.JFrame {
             this.x2.setText(conversion.convercionCarga1(Double.parseDouble(this.vX.getText().toString()), this.Cx1.getSelectedItem().toString()) + "m");
 
         } catch (Exception e) {
-            this.x.setText("");
-            this.x2.setText("");
+            this.x.setText("X");
+            this.x2.setText("X");
         }
     }//GEN-LAST:event_vXKeyReleased
 
@@ -2115,8 +2162,8 @@ public class Index extends javax.swing.JFrame {
             d3.setText(conversion.convercionCarga1(Double.parseDouble(distancia1.getText().toString()), Hprefi3.getSelectedItem().toString()) + "m");
             d4.setText(conversion.convercionCarga1(Double.parseDouble(distancia1.getText().toString()), Hprefi3.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            d3.setText("");
-            d4.setText("");
+            d3.setText("d");
+            d4.setText("d");
         }
     }//GEN-LAST:event_distancia1KeyReleased
 
@@ -2130,9 +2177,9 @@ public class Index extends javax.swing.JFrame {
             Rs2.setText(conversion.convercionCarga1(Double.parseDouble(radioM1.getText().toString()), Hprefi2.getSelectedItem().toString()) + "m");
             Rs3.setText(conversion.convercionCarga1(Double.parseDouble(radioM1.getText().toString()), Hprefi2.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            R1.setText("");
-            Rs2.setText("");
-            Rs3.setText("");
+            R1.setText("R");
+            Rs2.setText("R");
+            Rs3.setText("R");
 
         }
     }//GEN-LAST:event_radioM1KeyReleased
@@ -2147,9 +2194,9 @@ public class Index extends javax.swing.JFrame {
             h4.setText(conversion.convercionCarga1(Double.parseDouble(altura1.getText().toString()), Hprefi1.getSelectedItem().toString()) + "m");
             h5.setText(conversion.convercionCarga1(Double.parseDouble(altura1.getText().toString()), Hprefi1.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            h3.setText("");
-            h4.setText("");
-            h5.setText("");
+            h3.setText("h");
+            h4.setText("h");
+            h5.setText("h");
 
         }
     }//GEN-LAST:event_altura1KeyReleased
@@ -2266,8 +2313,8 @@ public class Index extends javax.swing.JFrame {
             this.d2.setText(conversion.convercionCarga1(Double.parseDouble(d), this.Dprefi.getSelectedItem().toString()) + " m");
 
         } catch (Exception e) {
-            this.d1.setText("");
-            this.d2.setText("");
+            this.d1.setText("d");
+            this.d2.setText("d");
         }
     }//GEN-LAST:event_distanciaKeyReleased
 
@@ -2286,7 +2333,8 @@ public class Index extends javax.swing.JFrame {
             this.R.setText(conversion.convercionCarga1(Double.parseDouble(d), this.Rprefi.getSelectedItem().toString()) + " m");
             this.r.setText(conversion.convercionCarga1(Double.parseDouble(d), this.Rprefi.getSelectedItem().toString()) + " m");
         } catch (Exception e) {
-            this.R.setText("");
+            this.R.setText("R");
+            this.r.setText("R");
         }
     }//GEN-LAST:event_radioMKeyReleased
 
@@ -2301,8 +2349,8 @@ public class Index extends javax.swing.JFrame {
             this.h1.setText(conversion.convercionCarga1(Double.parseDouble(h), this.Hprefi.getSelectedItem().toString()) + " m");
             this.h2.setText(conversion.convercionCarga1(Double.parseDouble(h), this.Hprefi.getSelectedItem().toString()) + " m");
         } catch (Exception e) {
-            this.h2.setText("");
-            this.h1.setText("");
+            this.h2.setText("h");
+            this.h1.setText("h");
         }
     }//GEN-LAST:event_alturaKeyReleased
 
@@ -2318,7 +2366,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.carga.setText(conversion.convercionCarga1(Double.parseDouble(this.cargas.getText()), this.prefijos.getSelectedItem().toString()) + "C");
         } catch (Exception e) {
-            this.carga.setText("");
+            this.carga.setText("Q");
         }
     }//GEN-LAST:event_cargasKeyReleased
 
@@ -2452,7 +2500,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.mCorrienteBC.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBC.getText()), this.prefijoIBC.getSelectedItem().toString()) + "A");
         } catch (Exception e) {
-            this.mCorrienteBC.setText("");
+            this.mCorrienteBC.setText("I");
         }
     }//GEN-LAST:event_corrienteBCKeyReleased
 
@@ -2460,15 +2508,16 @@ public class Index extends javax.swing.JFrame {
         try {
             this.aBC.setText(conversion.convercionCarga1(Double.parseDouble(this.radioABC.getText()), this.prefijoABC.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.aBC.setText("");
+            this.aBC.setText("a");
         }
     }//GEN-LAST:event_radioABCKeyReleased
 
     private void numerBCKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numerBCKeyReleased
         try {
+            double numero = Double.parseDouble(this.numerBC.getText());
             this.numBC.setText(this.numerBC.getText());
         } catch (Exception e) {
-            this.numBC.setText("");
+            this.numBC.setText("N");
         }
     }//GEN-LAST:event_numerBCKeyReleased
 
@@ -2491,7 +2540,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.iBP.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteBP.getText()), this.prefijoIBP.getSelectedItem().toString()) + "A");
         } catch (Exception e) {
-            this.iBP.setText("");
+            this.iBP.setText("I");
         }
     }//GEN-LAST:event_corrienteBPKeyReleased
 
@@ -2500,8 +2549,8 @@ public class Index extends javax.swing.JFrame {
             this.ABP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
             this.aBP.setText(conversion.convercionCarga1(Double.parseDouble(this.radioBP.getText()), this.prefijoBP.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.ABP.setText("");
-            this.aBP.setText("");
+            this.ABP.setText("a");
+            this.aBP.setText("a");
         }
     }//GEN-LAST:event_radioBPKeyReleased
 
@@ -2509,15 +2558,16 @@ public class Index extends javax.swing.JFrame {
         try {
             this.XBP.setText(conversion.convercionCarga1(Double.parseDouble(this.distanciaBP.getText()), this.prefijoXBP.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.XBP.setText("");
+            this.XBP.setText("x");
         }
     }//GEN-LAST:event_distanciaBPKeyReleased
 
     private void numeroBPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroBPKeyReleased
         try {
+            double numero = Double.parseDouble(this.numeroBP.getText());
             this.nBP.setText(this.numeroBP.getText());
         } catch (Exception e) {
-            this.nBP.setText("");
+            this.nBP.setText("N");
         }
     }//GEN-LAST:event_numeroBPKeyReleased
 
@@ -2525,7 +2575,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.cT.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteT.getText()), this.prefijoIT.getSelectedItem().toString()) + "A");
         } catch (Exception e) {
-            this.cT.setText("");
+            this.cT.setText("I");
         }
     }//GEN-LAST:event_corrienteTKeyReleased
 
@@ -2533,15 +2583,16 @@ public class Index extends javax.swing.JFrame {
         try {
             this.rT.setText(conversion.convercionCarga1(Double.parseDouble(this.radioT.getText()), this.prefijoRT.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.rT.setText("");
+            this.rT.setText("R");
         }
     }//GEN-LAST:event_radioTKeyReleased
 
     private void numeroTKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_numeroTKeyReleased
         try {
+            double numero = Double.parseDouble(this.numeroT.getText());
             this.nT.setText(this.numeroT.getText());
         } catch (Exception e) {
-            this.nT.setText("");
+            this.nT.setText("N");
         }
     }//GEN-LAST:event_numeroTKeyReleased
 
@@ -2549,7 +2600,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.IA.setText(conversion.convercionCarga1(Double.parseDouble(this.corrienteA.getText()), this.prefijoLA.getSelectedItem().toString()) + "A");
         } catch (Exception e) {
-            this.IA.setText("");
+            this.IA.setText("I");
         }
     }//GEN-LAST:event_corrienteAKeyReleased
 
@@ -2557,7 +2608,7 @@ public class Index extends javax.swing.JFrame {
         try {
             this.rA.setText(conversion.convercionCarga1(Double.parseDouble(this.radioLA.getText()), this.prefijoRLA.getSelectedItem().toString()) + "m");
         } catch (Exception e) {
-            this.rA.setText("");
+            this.rA.setText("R");
         }
     }//GEN-LAST:event_radioLAKeyReleased
 
